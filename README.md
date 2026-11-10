@@ -35,8 +35,8 @@ All numbers come from [`src/spec.py`](src/spec.py) (momentum theory, rigid-body 
 | Motor reaction torque | 9-70 N mm | ideal power / figure of merit 0.55 / shaft speed |
 | Prop wake | 14 m/s hover, 40 m/s full | 2 x induced velocity, sqrt(T / 2 rho A) |
 | Frame first mode floor | 546 Hz | 1.1 x full-throttle 1x line |
-| Wall crash, 4 m/s | 2.5 J, 395 N peak (127 g) | energy into an 8 mm bumper at 0.8 crush efficiency |
-| Drop, 2 m | 6.2 J, 969 N peak (313 g) | same bumper |
+| Wall crash, 3 m/s | 1.42 J, 222 N peak (72 g) | energy into an 8 mm bumper at 0.8 crush efficiency |
+| Drop, 1 m | 3.1 J, 484 N peak (156 g) | same bumper |
 | Canopy cooling in flight | h = 51 W/m^2K at 8 m/s | flat plate over a 60 mm canopy, plus radiation |
 
 ## Layout

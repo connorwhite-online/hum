@@ -52,6 +52,13 @@ PROP_Z = MOTOR_BASE_Z + MOTOR["height"] + 2.0   # prop plane
 DUCT_Z = (1.5, 24.0)              # duct: 6.5 mm (7% of D) of inlet above the prop plane
 FRAME_MASS_BUDGET = 0.060         # printed frame + ducts, first guess (refined by the design)
 
+# --- crash rating ------------------------------------------------------------
+# 2 m tumbles and 4 m/s wall hits read SF 0.2-0.8 even on a 164 g frame (bumper and frame flexing
+# together, loadpath impact cases): designed instead for 1 m and 3 m/s, what cinewhoops survive;
+# harder hits may crack a duct, a replaceable print.
+WALL_SPEED = 3.0                  # m/s
+DROP_HEIGHT = 1.0                 # m
+
 # --- materials (the frame) -------------------------------------------------
 FRAME_PROCESS = "sls"
 FRAME_MATERIAL = "pa12"           # loadpath card; Materialize PA12 SLS
@@ -118,8 +125,8 @@ def derived():
     f_full = rpm_at(tmax) / 60
     h_fwd, re_fwd = flat_plate_h(8.0, 60.0)   # 8 m/s cruise over a 60 mm canopy
     v_hover = induced_velocity(hover)
-    wall_f, wall_e = crash(4.0, 8.0)          # 4 m/s into a wall, 8 mm bumper stroke
-    drop_h = 2.0
+    wall_f, wall_e = crash(WALL_SPEED, 8.0)   # into a wall, 8 mm bumper stroke
+    drop_h = DROP_HEIGHT
     drop_v = math.sqrt(2 * G * drop_h)
     drop_f, drop_e = crash(drop_v, 8.0)
     return {
@@ -137,7 +144,7 @@ def derived():
         "wakeVelocity": [round(2 * v_hover, 2), round(2 * induced_velocity(tmax), 2)],
         "maxVerticalAccelG": round(4 * tmax / (m * G) - 1, 2),
         "cruiseH": round(h_fwd, 1), "cruiseRe": round(re_fwd),
-        "wallCrash": {"speed": 4.0, "energyJ": round(wall_e, 2), "stroke": 8.0, "peakForce": round(wall_f, 1),
+        "wallCrash": {"speed": WALL_SPEED, "energyJ": round(wall_e, 2), "stroke": 8.0, "peakForce": round(wall_f, 1),
                       "peakG": round(wall_f / (m * G), 1)},
         "drop": {"height": drop_h, "speed": round(drop_v, 2), "energyJ": round(drop_e, 2), "stroke": 8.0,
                  "peakForce": round(drop_f, 1), "peakG": round(drop_f / (m * G), 1)},

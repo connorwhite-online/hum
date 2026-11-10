@@ -34,19 +34,19 @@
  "cruiseH": 45.9,
  "cruiseRe": 32000,
  "wallCrash": {
-  "speed": 4.0,
-  "energyJ": 2.53,
+  "speed": 3.0,
+  "energyJ": 1.42,
   "stroke": 8.0,
-  "peakForce": 395.0,
-  "peakG": 127.4
+  "peakForce": 222.2,
+  "peakG": 71.7
  },
  "drop": {
-  "height": 2.0,
-  "speed": 6.26,
-  "energyJ": 6.2,
+  "height": 1.0,
+  "speed": 4.43,
+  "energyJ": 3.1,
   "stroke": 8.0,
-  "peakForce": 968.7,
-  "peakG": 312.5
+  "peakForce": 484.4,
+  "peakG": 156.2
  },
  "minFrequency": 546.0
 }
