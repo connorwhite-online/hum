@@ -21,6 +21,8 @@ D = S.derived()
 A = S.ARM
 R_IN = S.DUCT_ID / 2
 R_OUT = R_IN + S.DUCT_WALL
+SEAT = 3.0                         # designable band between the duct and the bumper: room for a ring beam behind the tyre
+R_SEAT = R_OUT + SEAT
 Z0, Z1 = S.DUCT_Z
 DS_Z = (-6.0, Z1)                  # frame envelope: motor-mount layer below the ducts to the duct tops
 STACK_TOP = 19.0                   # canopy seats on the posts here
@@ -105,7 +107,7 @@ def study():
         v = np.array([-u[1], u[0]])
         ctr = np.array([x, y]) + u * (65 - 0.4 * R_OUT)
         keep.append({"id": f"bumper{i + 1}", "bore": False, "shape": {"type": "intersect", "shapes": [
-            tube((x, y), R_OUT + BUMPER, R_OUT, BUMPER_Z, Z1 + 1.5),
+            tube((x, y), R_SEAT + BUMPER, R_SEAT, BUMPER_Z, Z1 + 1.5),
             {"type": "box", "center": [ctr[0], ctr[1], 5.0], "size": [130, 130, 60],
              "axes": [[u[0], u[1], 0], [v[0], v[1], 0]]}]}})
     keep.append({"id": "canopy", "bore": False, "shape": box([-42, -42, STACK_TOP], [42, 42, 80])})
@@ -144,13 +146,14 @@ def study():
     drop = bump["drop"]["peakForce"] * k
     x, y = MOTORS[0]
     # a bumper spreads the hit over the arc it crushes: 2 sqrt(2 R delta)
-    arc = 2 * math.sqrt(2 * (R_OUT + BUMPER) * bump["wall"]["crush"])
+    arc = 2 * math.sqrt(2 * (R_SEAT + BUMPER) * bump["wall"]["crush"])
 
     def patch(direction, z0=Z0, z1=Z1):
         u = np.array(direction, float) / np.linalg.norm(direction)
-        p = np.array([x, y]) + u * R_OUT
+        p = np.array([x, y]) + u * R_SEAT
         half = arc / 2
-        return {"type": "intersect", "shapes": [tube((x, y), R_OUT + 0.01, R_IN - 0.01, z0, z1),
+        # the tyre bears on the duct and whatever the design builds in the seat band behind it
+        return {"type": "intersect", "shapes": [tube((x, y), R_SEAT + 0.01, R_IN - 0.01, z0, z1),
                                                 {"type": "cylinder", "p0": [p[0], p[1], z0 - 1],
                                                  "p1": [p[0], p[1], z1 + 1], "r": half}]}
 
@@ -171,7 +174,7 @@ def study():
                        "Loads from hum/src/spec.py: full-throttle punch, roll, yaw and single-motor cases with "
                        "motor reaction torque; crash and drop forces as the TPU bumper lets them through (bumper.py), held "
                        f"to SF {CRASH_SF} (flight cases to {FLIGHT_SF}).",
-        "designSpace": box([-A - R_OUT - 0.5, -A - R_OUT - 0.5, DS_Z[0]], [A + R_OUT + 0.5, A + R_OUT + 0.5, DS_Z[1]]),
+        "designSpace": box([-A - R_SEAT - 0.5, -A - R_SEAT - 0.5, DS_Z[0]], [A + R_SEAT + 0.5, A + R_SEAT + 0.5, DS_Z[1]]),
         "preserve": preserve,
         "keepOut": keep,
         "fasteners": fasteners,

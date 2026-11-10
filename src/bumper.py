@@ -18,7 +18,7 @@ import json
 from pathlib import Path
 
 import spec as S
-from frame import BUMPER, BUMPER_Z, FOOT, R_OUT, A
+from frame import BUMPER, BUMPER_Z, FOOT, R_SEAT as R_OUT, A  # the tyre's inner face sits on the seat band
 from loadpath.fields import FieldGraph
 from loadpath.impact import impact_report
 from loadpath.materials import material_from_spec
@@ -27,19 +27,21 @@ D = S.derived()
 MAT = "tpu"                       # FDM TPU 95A: single 0.45 mm lines let the gyroid go soft enough
 CELL, MIN_WALL = 7.0, 0.45         # one 0.45 mm extrusion line per wall
 R2 = R_OUT + BUMPER
+FLAT = 0.0                        # flat faces (3 mm) read stiffer: 699 N vs 586 N round, the lattice floor sets the crush stress
 
 
 def tyre_cap(axis):
     """The tyre of the duct at (A, A), cut to the cap in front of the duct
     along +x (wall hit) or under it along -z (drop)."""
-    ring = (f"max(max({R_OUT} - r, r - {R2}), max({BUMPER_Z} - z, z - {S.DUCT_Z[1]}))")
+    flats = f"max(abs(x - {A}) - {R2 - FLAT}, abs(y - {A}) - {R2 - FLAT})"
+    ring = (f"max(max(max({R_OUT} - r, r - {R2}), {flats}), max({BUMPER_Z} - z, z - {S.DUCT_Z[1]}))")
     r = f"sqrt((x - {A}) * (x - {A}) + (y - {A}) * (y - {A}))"
     if axis == "x":
         expr = f"max({ring}, {A + R_OUT} - x)"
-        lo, hi = [A + R_OUT - 0.5, A - 40, BUMPER_Z], [A + R2 + 0.5, A + 40, S.DUCT_Z[1]]
+        lo, hi = [A + R_OUT - 0.5, A - 40, BUMPER_Z], [A + R2 - FLAT + 0.5, A + 40, S.DUCT_Z[1]]
     else:
         # the drop lands on the tyre's foot: the 8 mm under the frame's lowest point
-        ring = f"max(max({R_OUT} - r, r - {R2}), max({BUMPER_Z} - z, z - ({BUMPER_Z} + {FOOT})))"
+        ring = f"max(max(max({R_OUT} - r, r - {R2}), {flats}), max({BUMPER_Z} - z, z - ({BUMPER_Z} + {FOOT})))"
         expr = ring
         lo, hi = [A - R2 - 0.5, A - R2 - 0.5, BUMPER_Z], [A + R2 + 0.5, A + R2 + 0.5, BUMPER_Z + FOOT]
     return {"op": "expr", "expr": expr.replace("r", "rr").replace("max", "max").replace("rr -", "rr -"),
@@ -63,7 +65,10 @@ def crash(axis, mass, velocity, limit):
     doc = graph(axis)
     spec = {"envelope": "envelope", "density": "density", "lattice": "gyroid", "axis": "x" if axis == "x" else "z",
             "mass": mass, "velocity": velocity, "forceLimit": limit, "pitch": 0.5, "grade": True,
-            "cell": CELL, "minWall": MIN_WALL}
+            "cell": CELL, "minWall": MIN_WALL,
+            # the hit comes from +x (a wall ahead) or -z (the ground): the core crushes as columns under
+            # the contact patch, not as layers that each carry the whole load
+            "striker": {"side": "+" if axis == "x" else "-"}}
     mat = material_from_spec(MAT)
     first = impact_report(FieldGraph(doc), spec, mat)
     g = copy.deepcopy(doc)
