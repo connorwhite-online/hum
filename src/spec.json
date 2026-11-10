@@ -1,0 +1,52 @@
+{
+ "allUpMass": 0.316,
+ "frameBudget": 0.06,
+ "hoverThrustPerMotor": 0.775,
+ "maxThrustPerMotor": 5.984,
+ "thrustToWeight": 7.72,
+ "hoverRpm": 10721,
+ "fullRpm": 29792,
+ "rotorHz": [
+  178.7,
+  496.5
+ ],
+ "bladePassHz": [
+  536.1,
+  1489.6
+ ],
+ "motorTorqueNm": [
+  0.0091,
+  0.0699
+ ],
+ "shaftPowerW": [
+  10.2,
+  218.1
+ ],
+ "inducedVelocity": [
+  7.21,
+  20.04
+ ],
+ "wakeVelocity": [
+  14.43,
+  40.08
+ ],
+ "maxVerticalAccelG": 6.72,
+ "cruiseH": 45.9,
+ "cruiseRe": 32000,
+ "wallCrash": {
+  "speed": 4.0,
+  "energyJ": 2.53,
+  "stroke": 8.0,
+  "peakForce": 395.0,
+  "peakG": 127.4
+ },
+ "drop": {
+  "height": 2.0,
+  "speed": 6.26,
+  "energyJ": 6.2,
+  "stroke": 8.0,
+  "peakForce": 968.7,
+  "peakG": 312.5
+ },
+ "minFrequency": 546.0
+}
