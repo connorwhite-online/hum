@@ -159,6 +159,22 @@ def study():
                                                 {"type": "cylinder", "p0": [p[0], p[1], z0 - 1],
                                                  "p1": [p[0], p[1], z1 + 1], "r": half}]}
 
+    def patch_point(direction):
+        u = np.array(direction, float) / np.linalg.norm(direction)
+        p = np.array([x, y]) + u * R_SEAT
+        return np.array([p[0], p[1], 0.5 * (Z0 + Z1)])
+
+    def to_cg(p):
+        cg = all_cg()
+        d = cg - p
+        return d / np.linalg.norm(d)
+
+    def all_cg():
+        parts = [(m_motor, np.array([mx, my, 8.0])) for mx, my in MOTORS]
+        parts += [(m_stack, np.array([0.0, 0.0, 10.0])), (m_c, np.array(c_c)),
+                  (S.FRAME_MASS_BUDGET, np.array([0.0, 0.0, 9.0]))]
+        return sum(k * c for k, c in parts) / sum(k for k, _ in parts)
+
     def hit(which):
         # the bumper and the frame behind it are springs in series: the frame's own give at the
         # patch shares the energy, the force is solved, not assumed (loadpath impact cases)
@@ -177,6 +193,12 @@ def study():
                                                                                -round(wall * s2, 1), 0]}],
          "impact": hit("wall")},
         {"name": "drop-corner", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([s2, s2], Z0, Z0 + 3), "force": [0, 0, round(drop, 1)]}],
+         "impact": hit("drop")},
+        # the worst attitude for one tyre: tumbling so the line of the hit runs through the centre of
+        # mass; then the patch stops all of the drone and the full 2 m drop energy (a flat drop on a
+        # corner stops ~15% and the rest stays as spin for the next contacts)
+        {"name": "drop-cg", "safetyFactor": CRASH_SF,
+         "loads": [{"shape": patch([s2, s2]), "force": [round(v * drop, 1) for v in to_cg(patch_point([s2, s2]))]}],
          "impact": hit("drop")},
     ]
     return {
