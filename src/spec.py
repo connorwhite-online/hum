@@ -45,7 +45,8 @@ VOLTAGE = 15.2                    # 4S under load
 ARM = 52.0                        # motor centres at (+-ARM, +-ARM): 147 mm diagonal wheelbase
 TIP_GAP = 1.0                     # prop tip to duct wall (mm)
 DUCT_ID = PROP["diameter"] + 2 * TIP_GAP
-DUCT_WALL = 1.2                   # SLS PA12 wall >= 0.8 mm (Materialize), 1.2 for handling
+DUCT_WALL = 0.8                   # the drawn duct skin: SLS PA12's 0.8 mm floor (Materialize); the frame design
+                                  # thickens it where the loads need (frame.py: design band outside it)
 MOTOR_BASE_Z = 0.0                # the motor seats on z = 0, shaft up, prop above
 PROP_Z = MOTOR_BASE_Z + MOTOR["height"] + 2.0   # prop plane
 DUCT_Z = (1.5, 24.0)              # duct: 6.5 mm (7% of D) of inlet above the prop plane

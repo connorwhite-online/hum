@@ -21,8 +21,10 @@ D = S.derived()
 A = S.ARM
 R_IN = S.DUCT_ID / 2
 R_OUT = R_IN + S.DUCT_WALL
-SEAT = 3.0                         # designable band between the duct and the bumper: room for a ring beam behind the tyre
-R_SEAT = R_OUT + SEAT
+# the bumper's inner face: a designable band between the drawn duct skin and the tyre, where the
+# optimizer builds whatever ring beam the crash needs (a bare 1.2 mm duct read SF 0.1)
+R_SEAT = R_IN + 4.2
+SEAT = R_SEAT - R_OUT
 Z0, Z1 = S.DUCT_Z
 DS_Z = (-6.0, Z1)                  # frame envelope: motor-mount layer below the ducts to the duct tops
 STACK_TOP = 19.0                   # canopy seats on the posts here
