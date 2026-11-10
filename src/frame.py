@@ -159,16 +159,25 @@ def study():
                                                 {"type": "cylinder", "p0": [p[0], p[1], z0 - 1],
                                                  "p1": [p[0], p[1], z1 + 1], "r": half}]}
 
+    def hit(which):
+        # the bumper and the frame behind it are springs in series: the frame's own give at the
+        # patch shares the energy, the force is solved, not assumed (loadpath impact cases)
+        c = bump[which]["curve"]
+        return {"velocity": bump[which]["speed"], "crusher": {"distance": c["distance"], "force": c["force"]}}
+
     s2 = math.sqrt(0.5)
     cases = [
         {"name": "punch", "loads": motor_loads([t_full] * 4), "cycles": 1e5},
         {"name": "roll", "loads": motor_loads([t_full, t_full, t_idle, t_idle][::1]), "cycles": 1e5},
         {"name": "yaw", "loads": motor_loads([t_full, t_idle, t_full, t_idle]), "cycles": 1e5},
         {"name": "corner", "loads": motor_loads([t_full, t_idle, t_idle, t_idle])},
-        {"name": "wall-front", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([1, 0]), "force": [-round(wall, 1), 0, 0]}]},
+        {"name": "wall-front", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([1, 0]), "force": [-round(wall, 1), 0, 0]}],
+         "impact": hit("wall")},
         {"name": "wall-corner", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([s2, s2]), "force": [-round(wall * s2, 1),
-                                                                               -round(wall * s2, 1), 0]}]},
-        {"name": "drop-corner", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([s2, s2], Z0, Z0 + 3), "force": [0, 0, round(drop, 1)]}]},
+                                                                               -round(wall * s2, 1), 0]}],
+         "impact": hit("wall")},
+        {"name": "drop-corner", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([s2, s2], Z0, Z0 + 3), "force": [0, 0, round(drop, 1)]}],
+         "impact": hit("drop")},
     ]
     return {
         "name": "hum-frame",

@@ -91,5 +91,6 @@ if __name__ == "__main__":
         summary[name] = {"speed": v, "energyJ": round(graded["energy"] / 1000, 3), "limit": lim,
                          "peakForce": graded["response"]["peakForce"], "crush": graded["response"]["crush"],
                          "efficiency": graded["response"]["efficiency"], "coreMass": graded["coreMass"],
-                         "rebound": graded.get("reboundEnergy"), "ok": graded.get("ok")}
+                         "rebound": graded.get("reboundEnergy"), "ok": graded.get("ok"),
+                         "curve": graded.get("curve")}
     (here / "bumper.json").write_text(json.dumps(summary, indent=1) + "\n")
