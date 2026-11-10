@@ -15,3 +15,6 @@ physics is written down here, with what was fixed in loadpath and what is still 
 | 8 | No ducted-propeller thrust model (fan.py is a fan against a system curve) | Duct inlet lip and tip gap set the thrust gain | Open |
 | 9 | Cooling airflow is steady; a cycle cannot change it per phase | The worst case is idling on the ground with the VTX on (no flow), then flight cools it | Open |
 | 10 | Motor heat softening the PA12 under the motor | Motors run 60-80 C; PA12 loses stiffness well before that | Open (durability at 50 C only) |
+| 11 | The impact model crushes flat layers along one axis; a round tyre meets a wall at a point | The cap's first layers are tiny, so even at the softest printable density the force ramps up: the 4 m/s hit reads 499 N against the 395 N the energy alone would allow in 10 mm. A tyre profile shaped for constant layer area (flatter faces) would do better | Open (frame designed for the 499 N the bumper gives) |
+| 12 | The impact model takes one material limit per study; SLS TPU's 1.0 mm walls cannot make a gyroid soft enough | Forced FDM TPU 95A (0.45 mm lines, 7 mm cells) for the bumpers | Noted |
+

@@ -28,6 +28,7 @@ GRIP = 3.0                         # motor mount: M2 x 6 through 3 mm into the m
 POSTS = [(24.0, 0.0), (-24.0, 0.0), (0.0, 24.0), (0.0, -24.0)]
 MOTORS = [(A, A), (A, -A), (-A, -A), (-A, A)]
 SPIN = [-1, 1, -1, 1]              # sign of the reaction torque about z on the frame (props in)
+BUMPER, BUMPER_Z, FOOT = 10.5, -18.5, 12.5   # tyre: 10.5 mm round the duct, a 12.5 mm foot under the frame (bumper.py)
 CRASH_SF, FLIGHT_SF = 1.25, 2.0    # a crash may use most of the strength; flight keeps 2 + fatigue
 
 
@@ -92,6 +93,15 @@ def study():
                      "shape": {"type": "cylinder", "p0": [x, y, -20.0], "p1": [x, y, 0.5], "r": 3.5}})
     keep.append({"id": "stack", "bore": False, "insertFrom": "+z",
                  "shape": box([-14.5, -14.5, 1.5], [14.5, 14.5, STACK_TOP])})
+    for i, (x, y) in enumerate(MOTORS):
+        # the TPU bumper tyre round the duct's exposed arc (outward, +-114 deg)
+        u = np.array([np.sign(x), np.sign(y)]) / math.sqrt(2)
+        v = np.array([-u[1], u[0]])
+        ctr = np.array([x, y]) + u * (65 - 0.4 * R_OUT)
+        keep.append({"id": f"bumper{i + 1}", "bore": False, "shape": {"type": "intersect", "shapes": [
+            tube((x, y), R_OUT + BUMPER, R_OUT, BUMPER_Z, Z1 + 1.5),
+            {"type": "box", "center": [ctr[0], ctr[1], 5.0], "size": [130, 130, 60],
+             "axes": [[u[0], u[1], 0], [v[0], v[1], 0]]}]}})
     keep.append({"id": "canopy", "bore": False, "shape": box([-42, -42, STACK_TOP], [42, 42, 80])})
 
     m_c, c_c, j_c = canopy_group()
@@ -122,11 +132,13 @@ def study():
         return out
 
     k = CRASH_SF / FLIGHT_SF
-    wall = D["wallCrash"]["peakForce"] * k
-    drop = D["drop"]["peakForce"] * k
+    # the crash forces are what the bumper actually lets through (bumper.py)
+    bump = json.loads((Path(__file__).resolve().parents[1] / "studies" / "bumper.json").read_text())
+    wall = bump["wall"]["peakForce"] * k
+    drop = bump["drop"]["peakForce"] * k
     x, y = MOTORS[0]
     # a bumper spreads the hit over the arc it crushes: 2 sqrt(2 R delta)
-    arc = 2 * math.sqrt(2 * (R_OUT + 8) * 8.0)
+    arc = 2 * math.sqrt(2 * (R_OUT + BUMPER) * bump["wall"]["crush"])
 
     def patch(direction, z0=Z0, z1=Z1):
         u = np.array(direction, float) / np.linalg.norm(direction)
@@ -151,7 +163,7 @@ def study():
         "name": "hum-frame",
         "description": "3.5 in ducted quad frame, SLS PA12: ducts, motor mounts, stack floor, canopy posts. "
                        "Loads from hum/src/spec.py: full-throttle punch, roll, yaw and single-motor cases with "
-                       "motor reaction torque; crash and drop forces from a bumper's 8 mm crush, scaled by "
+                       "motor reaction torque; crash and drop forces as the TPU bumper lets them through (bumper.py), scaled by "
                        f"{CRASH_SF}/{FLIGHT_SF} (crash SF {CRASH_SF}, flight SF {FLIGHT_SF}).",
         "designSpace": box([-A - R_OUT - 0.5, -A - R_OUT - 0.5, DS_Z[0]], [A + R_OUT + 0.5, A + R_OUT + 0.5, DS_Z[1]]),
         "preserve": preserve,

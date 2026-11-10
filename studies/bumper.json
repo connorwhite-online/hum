@@ -1,0 +1,24 @@
+{
+ "wall": {
+  "speed": 4.0,
+  "energyJ": 2.528,
+  "limit": 395.0,
+  "peakForce": 499.2,
+  "crush": 5.79,
+  "efficiency": 0.875,
+  "coreMass": 5.14,
+  "rebound": 1769.6,
+  "ok": false
+ },
+ "drop": {
+  "speed": 6.26,
+  "energyJ": 6.192,
+  "limit": 968.7,
+  "peakForce": 817.0,
+  "crush": 7.778,
+  "efficiency": 0.974,
+  "coreMass": 10.94,
+  "rebound": 4334.1,
+  "ok": true
+ }
+}
