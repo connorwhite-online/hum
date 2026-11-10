@@ -1,0 +1,31 @@
+# hum: Betaflight CLI diff, written by src/firmware.py from src/spec.json
+# paste into the Betaflight CLI on a stock 4.5+ target, then: save
+
+# motors: bidirectional DShot gives the RPM filter each motor's speed
+set motor_pwm_protocol = DSHOT600
+set dshot_bidir = ON
+set motor_poles = 14
+# RPM filter: three-blade props excite 1x (imbalance) and 3x (blade pass); 2x is weak
+set rpm_filter_harmonics = 3
+set rpm_filter_weights = 100,0,100
+# lowest notch at 60% of hover rotor speed (179 Hz): idle and descents
+set rpm_filter_min_hz = 107
+# dynamic notch on the frame's first free-free mode, 546 Hz (spec floor (frame not checked yet))
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 437
+set dyn_notch_max_hz = 710
+# gyro lowpass under hover blade pass (536 Hz), over the control band
+set gyro_lpf1_dyn_min_hz = 241
+set gyro_lpf1_dyn_max_hz = 482
+# battery: 4S LiPo, 850 mAh
+set vbat_min_cell_voltage = 330
+set vbat_warning_cell_voltage = 350
+set bat_capacity = 850
+# props out: the wash leaves the camera's side, and ducts keep blades off the ground
+set yaw_motors_reversed = ON
+# hover throttle: thrust ~ throttle^2, hover 13% of full thrust
+set thr_mid = 36
+set thr_expo = 30
+
+save
