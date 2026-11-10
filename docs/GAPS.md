@@ -9,7 +9,7 @@ physics is written down here, with what was fixed in loadpath and what is still 
 | 2 | Natural frequencies only for a clamped part | A drone in flight is free-free; its first flexible mode is what the props excite | **Fixed** 3b58223: free-free modes for inertia-relief parts, carried masses included |
 | 3 | A carried mass could only sit on its mounts | The battery's centre is ~23 mm above its posts: in a crash its inertia twists the posts (m a h), and it rocks on them at a far lower frequency | **Fixed** a0e14d3: `masses[].at` (+ `size` / `inertia`) makes it a rigid body |
 | 4 | Cooling had only still air (h = 10 W/m^2K) outside | In flight the canopy sits in an 8 m/s stream: h ~ 51 | **Fixed** e244720: `cooling.skin.airflow` (flat plate + natural + radiation) |
-| 5 | One safety factor for every load case | Flight loads want SF 2 plus fatigue; a crash may use most of the strength (SF 1.25) | Open. Worked around: crash forces scaled by 1.25/2 |
+| 5 | One safety factor for every load case | Flight loads want SF 2 plus fatigue; a crash may use most of the strength (SF 1.25) | **Fixed** f18c53d: `loadCases[].safetyFactor` |
 | 6 | No aerodynamic cost for structure in a rotor's wake | Arms and spokes under the prop block thrust; the optimizer sees them as free | Open |
 | 7 | Vibration is a floor (`minFrequency`) only | The 1x rotor line sweeps 179-497 Hz and blade pass 536-1490 Hz with throttle; a floor above the 1x band is the best available | Open (floor at 1.1 x full-throttle 1x = 546 Hz) |
 | 8 | No ducted-propeller thrust model (fan.py is a fan against a system curve) | Duct inlet lip and tip gap set the thrust gain | Open |

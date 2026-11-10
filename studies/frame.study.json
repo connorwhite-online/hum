@@ -1,6 +1,6 @@
 {
  "name": "hum-frame",
- "description": "3.5 in ducted quad frame, SLS PA12: ducts, motor mounts, stack floor, canopy posts. Loads from hum/src/spec.py: full-throttle punch, roll, yaw and single-motor cases with motor reaction torque; crash and drop forces as the TPU bumper lets them through (bumper.py), scaled by 1.25/2.0 (crash SF 1.25, flight SF 2.0).",
+ "description": "3.5 in ducted quad frame, SLS PA12: ducts, motor mounts, stack floor, canopy posts. Loads from hum/src/spec.py: full-throttle punch, roll, yaw and single-motor cases with motor reaction torque; crash and drop forces as the TPU bumper lets them through (bumper.py), held to SF 1.25 (flight cases to 2.0).",
  "designSpace": {
   "type": "box",
   "min": [
@@ -3081,6 +3081,7 @@
   },
   {
    "name": "wall-front",
+   "safetyFactor": 1.25,
    "loads": [
     {
      "shape": {
@@ -3118,7 +3119,7 @@
       ]
      },
      "force": [
-      -312.0,
+      -499.2,
       0,
       0
      ]
@@ -3127,6 +3128,7 @@
   },
   {
    "name": "wall-corner",
+   "safetyFactor": 1.25,
    "loads": [
     {
      "shape": {
@@ -3164,8 +3166,8 @@
       ]
      },
      "force": [
-      -220.6,
-      -220.6,
+      -353.0,
+      -353.0,
       0
      ]
     }
@@ -3173,6 +3175,7 @@
   },
   {
    "name": "drop-corner",
+   "safetyFactor": 1.25,
    "loads": [
     {
      "shape": {
@@ -3212,7 +3215,7 @@
      "force": [
       0,
       0,
-      510.6
+      817.0
      ]
     }
    ]

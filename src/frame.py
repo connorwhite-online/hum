@@ -131,7 +131,7 @@ def study():
                             "moment": [0, 0, round(SPIN[i] * q, 2)]})
         return out
 
-    k = CRASH_SF / FLIGHT_SF
+    k = 1.0       # crash cases carry their own safetyFactor (CRASH_SF)
     # the crash forces are what the bumper actually lets through (bumper.py)
     bump = json.loads((Path(__file__).resolve().parents[1] / "studies" / "bumper.json").read_text())
     wall = bump["wall"]["peakForce"] * k
@@ -154,17 +154,17 @@ def study():
         {"name": "roll", "loads": motor_loads([t_full, t_full, t_idle, t_idle][::1]), "cycles": 1e5},
         {"name": "yaw", "loads": motor_loads([t_full, t_idle, t_full, t_idle]), "cycles": 1e5},
         {"name": "corner", "loads": motor_loads([t_full, t_idle, t_idle, t_idle])},
-        {"name": "wall-front", "loads": [{"shape": patch([1, 0]), "force": [-round(wall, 1), 0, 0]}]},
-        {"name": "wall-corner", "loads": [{"shape": patch([s2, s2]), "force": [-round(wall * s2, 1),
+        {"name": "wall-front", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([1, 0]), "force": [-round(wall, 1), 0, 0]}]},
+        {"name": "wall-corner", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([s2, s2]), "force": [-round(wall * s2, 1),
                                                                                -round(wall * s2, 1), 0]}]},
-        {"name": "drop-corner", "loads": [{"shape": patch([s2, s2], Z0, Z0 + 3), "force": [0, 0, round(drop, 1)]}]},
+        {"name": "drop-corner", "safetyFactor": CRASH_SF, "loads": [{"shape": patch([s2, s2], Z0, Z0 + 3), "force": [0, 0, round(drop, 1)]}]},
     ]
     return {
         "name": "hum-frame",
         "description": "3.5 in ducted quad frame, SLS PA12: ducts, motor mounts, stack floor, canopy posts. "
                        "Loads from hum/src/spec.py: full-throttle punch, roll, yaw and single-motor cases with "
-                       "motor reaction torque; crash and drop forces as the TPU bumper lets them through (bumper.py), scaled by "
-                       f"{CRASH_SF}/{FLIGHT_SF} (crash SF {CRASH_SF}, flight SF {FLIGHT_SF}).",
+                       "motor reaction torque; crash and drop forces as the TPU bumper lets them through (bumper.py), held "
+                       f"to SF {CRASH_SF} (flight cases to {FLIGHT_SF}).",
         "designSpace": box([-A - R_OUT - 0.5, -A - R_OUT - 0.5, DS_Z[0]], [A + R_OUT + 0.5, A + R_OUT + 0.5, DS_Z[1]]),
         "preserve": preserve,
         "keepOut": keep,
