@@ -3230,6 +3230,132 @@
   "minFrequency": 546.0,
   "modes": 6
  },
+ "thermal": {
+  "ambient": 25.0,
+  "convection": 111.0,
+  "temperatures": [
+   {
+    "region": "m1a-face",
+    "t": 70.0
+   },
+   {
+    "region": "m1b-face",
+    "t": 70.0
+   },
+   {
+    "region": "m1c-face",
+    "t": 70.0
+   },
+   {
+    "region": "m1d-face",
+    "t": 70.0
+   },
+   {
+    "region": "m2a-face",
+    "t": 70.0
+   },
+   {
+    "region": "m2b-face",
+    "t": 70.0
+   },
+   {
+    "region": "m2c-face",
+    "t": 70.0
+   },
+   {
+    "region": "m2d-face",
+    "t": 70.0
+   },
+   {
+    "region": "m3a-face",
+    "t": 70.0
+   },
+   {
+    "region": "m3b-face",
+    "t": 70.0
+   },
+   {
+    "region": "m3c-face",
+    "t": 70.0
+   },
+   {
+    "region": "m3d-face",
+    "t": 70.0
+   },
+   {
+    "region": "m4a-face",
+    "t": 70.0
+   },
+   {
+    "region": "m4b-face",
+    "t": 70.0
+   },
+   {
+    "region": "m4c-face",
+    "t": 70.0
+   },
+   {
+    "region": "m4d-face",
+    "t": 70.0
+   }
+  ]
+ },
+ "aero": {
+  "rotors": [
+   {
+    "name": "m1",
+    "center": [
+     52.0,
+     52.0,
+     17.5
+    ],
+    "axis": "-z",
+    "radius": 44.45,
+    "hub": 14.0,
+    "thrust": 0.775,
+    "ducted": true
+   },
+   {
+    "name": "m2",
+    "center": [
+     52.0,
+     -52.0,
+     17.5
+    ],
+    "axis": "-z",
+    "radius": 44.45,
+    "hub": 14.0,
+    "thrust": 0.775,
+    "ducted": true
+   },
+   {
+    "name": "m3",
+    "center": [
+     -52.0,
+     -52.0,
+     17.5
+    ],
+    "axis": "-z",
+    "radius": 44.45,
+    "hub": 14.0,
+    "thrust": 0.775,
+    "ducted": true
+   },
+   {
+    "name": "m4",
+    "center": [
+     -52.0,
+     52.0,
+     17.5
+    ],
+    "axis": "-z",
+    "radius": 44.45,
+    "hub": 14.0,
+    "thrust": 0.775,
+    "ducted": true
+   }
+  ]
+ },
  "symmetry": [
   "x",
   "y"

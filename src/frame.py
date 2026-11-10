@@ -27,6 +27,12 @@ STACK_TOP = 19.0                   # canopy seats on the posts here
 GRIP = 3.0                         # motor mount: M2 x 6 through 3 mm into the motor's 2.5 mm thread
 POSTS = [(24.0, 0.0), (-24.0, 0.0), (0.0, 24.0), (0.0, -24.0)]
 MOTORS = [(A, A), (A, -A), (-A, -A), (-A, A)]
+MOTOR_BASE_T = 70.0
+
+
+def S_forced_h():
+    from loadpath.cooling import forced_h
+    return forced_h(D["wakeVelocity"][0], 20.0, 25.0, MOTOR_BASE_T - 25.0)["h"]
 SPIN = [-1, 1, -1, 1]              # sign of the reaction torque about z on the frame (props in)
 BUMPER, BUMPER_Z, FOOT = 10.5, -18.5, 12.5   # tyre: 10.5 mm round the duct, a 12.5 mm foot under the frame (bumper.py)
 CRASH_SF, FLIGHT_SF = 1.25, 2.0    # a crash may use most of the strength; flight keeps 2 + fatigue
@@ -175,6 +181,15 @@ def study():
         "process": S.FRAME_PROCESS,
         "goal": {"safetyFactor": FLIGHT_SF},
         "vibration": {"minFrequency": D["minFrequency"], "modes": 6},
+        # every gram of structure in a prop's stream costs thrust: drag / g counts as carried mass
+        # motor bases run hot after a hard pack (stator 60-80 C, base ~70 C); the hover wake
+        # (2 v_i ~ 14 m/s over a 20 mm arm) cools the rest at h ~ 110 W/m^2K (cooling.forced_h)
+        "thermal": {"ambient": 25.0, "convection": round(S_forced_h(), 0),
+                    "temperatures": [{"region": f, "t": MOTOR_BASE_T} for fs in motor_faces for f in fs]},
+        "aero": {"rotors": [{"name": f"m{i + 1}", "center": [x, y, S.PROP_Z], "axis": "-z",
+                             "radius": S.PROP["diameter"] / 2, "hub": 14.0,
+                             "thrust": D["hoverThrustPerMotor"], "ducted": True}
+                            for i, (x, y) in enumerate(MOTORS)]},
         "symmetry": ["x", "y"],
         "durability": {"temperature": 50},
         "minMember": 2.4,
