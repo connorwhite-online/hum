@@ -25,11 +25,14 @@ PR_AIR = 0.71
 # --- off-the-shelf parts (generic classes) -------------------------------
 MOTOR = {  # 1804-class outrunner, 2450 KV, on 4S
     "kv": 2450, "mass": 0.020, "bellDiameter": 23.0, "height": 15.5,
+    "rm": 0.12, "i0": 0.6, "maxCurrent": 25.0,   # winding ohms, no-load amps (datasheet-typical for the class)
+    "rotorInertia": 1.0e-6,                       # kg m^2: ~9 g bell at ~10.5 mm
     "boltPattern": 12.0, "bolt": "M2", "boltDepth": 2.5,  # tapped base, screws from below
     "shaftClearance": 6.0,  # circlip/shaft boss under the base
 }
 PROP = {"diameter": 88.9, "blades": 3, "mass": 0.0035, "hubHeight": 6.0}  # 3.5 in tri-blade
-BATTERY = {"cells": 4, "capacity": 0.85, "mass": 0.100, "size": [60.0, 31.0, 30.0], "maxTemp": 60.0}  # 4S 850 mAh LiPo
+BATTERY = {"cells": 4, "capacity": 0.85, "mass": 0.100, "size": [60.0, 31.0, 30.0], "maxTemp": 60.0,  # 4S 850 mAh LiPo
+           "cellVolts": 3.8, "cellOhms": 0.012}                                 # under load; internal resistance
 FC = {"mass": 0.006, "board": [27.0, 27.0, 5.0], "pattern": 20.0, "bolt": "M2", "watts": 0.6, "maxTemp": 85.0}
 ESC = {"mass": 0.009, "board": [27.0, 27.0, 6.0], "pattern": 20.0, "bolt": "M2",  # 4-in-1, 35 A class
        "wattsHover": 1.2, "wattsFull": 7.0, "maxTemp": 100.0}
@@ -52,6 +55,13 @@ PROP_Z = MOTOR_BASE_Z + MOTOR["height"] + 2.0   # prop plane
 DUCT_Z = (1.5, 24.0)              # duct: 6.5 mm (7% of D) of inlet above the prop plane
 FRAME_MASS_BUDGET = 0.060         # printed frame + ducts, first guess (refined by the design)
 
+# --- what it must lift ---------------------------------------------------------
+# The mission sets full-throttle thrust, not a habit: carrying PAYLOAD (what the gripper will pick up), it must still
+# hold its height banked to BANK_MAX, which is also the authority left to hold attitude in a gust. Thrust per rotor
+# at full throttle >= (all-up + payload) g / (4 cos BANK_MAX).
+PAYLOAD = 0.100                   # kg
+BANK_MAX = 60.0                   # deg
+
 # --- crash rating ------------------------------------------------------------
 # 2 m tumbles and 4 m/s wall hits read SF 0.2-0.8 even on a 164 g frame (bumper and frame flexing
 # together, loadpath impact cases): designed instead for 1 m and 3 m/s, what cinewhoops survive;
@@ -67,6 +77,11 @@ FRAME_MATERIAL = "pa12"           # loadpath card; Materialize PA12 SLS
 def all_up_mass(frame=FRAME_MASS_BUDGET):
     return (4 * (MOTOR["mass"] + PROP["mass"]) + BATTERY["mass"] + FC["mass"] + ESC["mass"] + VTX["mass"]
             + CAMERA["mass"] + RX["mass"] + WIRING["mass"] + frame)
+
+
+def required_full_thrust(frame=FRAME_MASS_BUDGET):
+    """Per rotor (N): hold height at BANK_MAX carrying PAYLOAD."""
+    return (all_up_mass(frame) + PAYLOAD) * G / (4 * math.cos(math.radians(BANK_MAX)))
 
 
 def disk_area():
@@ -135,6 +150,7 @@ def derived():
         "hoverThrustPerMotor": round(hover, 3),
         "maxThrustPerMotor": round(tmax, 3),
         "thrustToWeight": round(4 * tmax / (m * G), 2),
+        "requiredFullThrustPerMotor": round(required_full_thrust(), 3),
         "hoverRpm": round(rpm_at(hover)), "fullRpm": round(rpm_at(tmax)),
         "rotorHz": [round(f_hover, 1), round(f_full, 1)],
         "bladePassHz": [round(f_hover * PROP["blades"], 1), round(f_full * PROP["blades"], 1)],

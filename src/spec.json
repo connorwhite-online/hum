@@ -4,6 +4,7 @@
  "hoverThrustPerMotor": 0.775,
  "maxThrustPerMotor": 5.984,
  "thrustToWeight": 7.72,
+ "requiredFullThrustPerMotor": 2.04,
  "hoverRpm": 10721,
  "fullRpm": 29792,
  "rotorHz": [
