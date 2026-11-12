@@ -253,8 +253,33 @@ def _thread(f):
     return {"type": "tube", "p0": [x, y, z - 4.0], "p1": [x, y, z], "r": 2.5, "rInner": 0.85}
 
 
+# carbon core (Connor's crash-rating question, 2026-11-12): four bought pultruded tubes on the diagonals, hub to motor,
+# in the motor-mount layer below the motor's base, bonded (polyurethane holds 5 MPa on PA12, epoxy 3.8: docs/STOCK.md)
+TUBE_OD, TUBE_WALL = 8.0, 1.0
+TUBE_Z = DS_Z[0] + TUBE_OD / 2      # bottom of the frame envelope: the tube's top stays under the motor's base
+TUBE_IN, TUBE_OUT = 16.0, 14.0      # tube ends: clear of the stack posts at the hub, short of the motor's screws
+
+
+def carbon_study():
+    st = study()
+    stock = []
+    for i, (x, y) in enumerate(MOTORS):
+        u = np.array([x, y]) / math.hypot(x, y)
+        a = u * TUBE_IN
+        b = np.array([x, y]) - u * TUBE_OUT
+        stock.append({"id": f"arm{i + 1}", "type": "tube", "material": "cfrp-pultruded", "od": TUBE_OD,
+                      "wall": TUBE_WALL, "from": [float(a[0]), float(a[1]), TUBE_Z],
+                      "to": [float(b[0]), float(b[1]), TUBE_Z],
+                      "joint": {"type": "bond", "adhesive": "polyurethane"}})
+    st["name"] = "hum-frame-carbon"
+    st["description"] = st["description"] + " Carbon core: four 8 mm pultruded tubes on the diagonals, bonded."
+    st["stock"] = stock
+    return st
+
+
 if __name__ == "__main__":
     out = Path(__file__).resolve().parents[1] / "studies" / "frame.study.json"
     out.write_text(json.dumps(study(), indent=1) + "\n")
+    (out.parent / "frame-carbon.study.json").write_text(json.dumps(carbon_study(), indent=1) + "\n")
     m, c, j = canopy_group()
     print(out, f"canopy group {m:.3f} kg at {np.round(c, 1)}")
