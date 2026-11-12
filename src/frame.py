@@ -256,7 +256,8 @@ def _thread(f):
 # carbon core (Connor's crash-rating question, 2026-11-12): four bought pultruded tubes on the diagonals, hub to motor,
 # in the motor-mount layer below the motor's base, bonded (polyurethane holds 5 MPa on PA12, epoxy 3.8: docs/STOCK.md)
 TUBE_OD, TUBE_WALL = 8.0, 1.0
-TUBE_Z = DS_Z[0] + TUBE_OD / 2      # bottom of the frame envelope: the tube's top stays under the motor's base
+TUBE_FLOOR = DS_Z[0] - 2.0          # the carbon frame's envelope runs 2 mm lower, so the tube's top clears the motor's base
+TUBE_Z = -TUBE_OD / 2 - 0.5          # and its sleeve sits wholly above that floor and below the base (z 0)
 TUBE_IN, TUBE_OUT = 16.0, 14.0      # tube ends: clear of the stack posts at the hub, short of the motor's screws
 
 
@@ -274,6 +275,7 @@ def carbon_study():
     st["name"] = "hum-frame-carbon"
     st["description"] = st["description"] + " Carbon core: four 8 mm pultruded tubes on the diagonals, bonded."
     st["stock"] = stock
+    st["designSpace"] = box([-A - R_SEAT - 0.5, -A - R_SEAT - 0.5, TUBE_FLOOR], [A + R_SEAT + 0.5, A + R_SEAT + 0.5, DS_Z[1]])
     return st
 
 
