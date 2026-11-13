@@ -1,0 +1,4226 @@
+{
+  "name": "hum-frame-carbon",
+  "domain": {
+    "pitch": 1.5,
+    "cells": 130588,
+    "dims": [
+      137,
+      137,
+      24
+    ],
+    "preservedCells": 18524,
+    "filterRadius": 3.12,
+    "loadCases": [
+      "punch",
+      "roll",
+      "yaw",
+      "corner",
+      "wall-front",
+      "wall-corner",
+      "drop-corner",
+      "drop-cg",
+      "preload"
+    ]
+  },
+  "outcomes": [
+    {
+      "material": "pa12",
+      "volumeFraction": 0.3,
+      "mass": 150.31006361687335,
+      "massReduction": 0.7041673640367858,
+      "safetyFactor": 0.4850589810452339,
+      "cases": [
+        {
+          "name": "punch",
+          "peakStress": 3.8847408098785587,
+          "peakAt": [
+            -41.236127077639416,
+            62.23825160756998,
+            -1.7569443630586523
+          ],
+          "globalPeakStress": 3.8847408098785587,
+          "refined": [],
+          "p99Stress": 1.3270991145127415,
+          "contactPeakStress": 4.043340578063734,
+          "safetyFactor": 10.58239407833642,
+          "peakTemperature": 27.79364711992269,
+          "strengthRetention": 0.9455267372736058,
+          "interlayerStress": null,
+          "deflection": 0.046235030908222216,
+          "maxDisplacement": 0.08520615074222344,
+          "compliance": 490.00052891077684
+        },
+        {
+          "name": "roll",
+          "peakStress": 3.8878466743605626,
+          "peakAt": [
+            -41.236127077639416,
+            62.23825160756998,
+            -1.7569443630586523
+          ],
+          "globalPeakStress": 3.8878466743605626,
+          "refined": [],
+          "p99Stress": 1.3538728285587505,
+          "contactPeakStress": 4.338436298358934,
+          "safetyFactor": 10.573940174503425,
+          "peakTemperature": 27.79364711992269,
+          "strengthRetention": 0.9455267372736058,
+          "interlayerStress": null,
+          "deflection": 0.026833432030707864,
+          "maxDisplacement": 0.13261995132558393,
+          "compliance": 490.1500206513289
+        },
+        {
+          "name": "yaw",
+          "peakStress": 3.913598715833766,
+          "peakAt": [
+            -41.236127077639416,
+            62.23825160756998,
+            -1.7569443630586523
+          ],
+          "globalPeakStress": 3.913598715833766,
+          "refined": [],
+          "p99Stress": 1.3580393550858894,
+          "contactPeakStress": 4.373288977008705,
+          "safetyFactor": 10.50436212992586,
+          "peakTemperature": 27.79364711992269,
+          "strengthRetention": 0.9455267372736058,
+          "interlayerStress": null,
+          "deflection": 0.01271988446349715,
+          "maxDisplacement": 0.15976856158938704,
+          "compliance": 490.24389905518285
+        },
+        {
+          "name": "corner",
+          "peakStress": 3.905999934628338,
+          "peakAt": [
+            -41.236127077639416,
+            62.23825160756998,
+            -1.7569443630586523
+          ],
+          "globalPeakStress": 3.905999934628338,
+          "refined": [],
+          "p99Stress": 1.3634709964881278,
+          "contactPeakStress": 4.359893546979736,
+          "safetyFactor": 10.52479744760732,
+          "peakTemperature": 27.79364711992269,
+          "strengthRetention": 0.9455267372736058,
+          "interlayerStress": null,
+          "deflection": 0.009987900125650121,
+          "maxDisplacement": 0.14440488929027664,
+          "compliance": 490.2373327121678
+        },
+        {
+          "name": "wall-front",
+          "impact": {
+            "energy": 1.0324731973093013,
+            "compliance": 0.023166247806964257,
+            "stiffness": 43.166248083532075,
+            "peakForce": 249.47629162583925,
+            "crush": 2.022465383730189,
+            "deflection": 5.7794295937666735,
+            "crusherEnergy": 0.3115577847667489,
+            "structureEnergy": 0.7209154125425523,
+            "structureShare": 0.6982412855087273,
+            "bottomedOut": false,
+            "rigidBackingForce": 369.4327961244206,
+            "forceAsWritten": 408.5999999999945,
+            "mass": 0.22943848829095584,
+            "stopSeconds": 0.005201263318331242,
+            "linear": true
+          },
+          "requiredSafetyFactor": 1.25,
+          "countsAs": 0.5497989864481755,
+          "peakStress": 123.6174798666469,
+          "peakAt": [
+            43.56896270303973,
+            70.44519577989375,
+            -4.492592420499914
+          ],
+          "globalPeakStress": 123.6174798666469,
+          "refined": [],
+          "p99Stress": 20.413576260910226,
+          "contactPeakStress": 123.6174798666469,
+          "safetyFactor": 0.34362436653010964,
+          "peakTemperature": 25.024572100480345,
+          "strengthRetention": 0.9769934988581779,
+          "interlayerStress": null,
+          "deflection": 3.6413500388128126,
+          "maxDisplacement": 6.268001284560403,
+          "compliance": 1933.5817301593524
+        },
+        {
+          "name": "wall-corner",
+          "impact": {
+            "energy": 1.912817077053413,
+            "compliance": 0.021350258767605407,
+            "stiffness": 46.83783980722954,
+            "peakForce": 331.4421640969605,
+            "crush": 3.4870968766797756,
+            "deflection": 7.07637596996524,
+            "crusherEnergy": 0.7401123768917762,
+            "structureEnergy": 1.1727047001616369,
+            "structureShare": 0.613077284926859,
+            "bottomedOut": false,
+            "rigidBackingForce": 451.40086749856687,
+            "forceAsWritten": 408.5662981695928,
+            "mass": 0.4250704615674251,
+            "stopSeconds": 0.007042315231096678,
+            "linear": true
+          },
+          "requiredSafetyFactor": 1.25,
+          "countsAs": 1.0051232205210756,
+          "peakStress": 67.63766703954549,
+          "peakAt": [
+            79.13238744977615,
+            12.99658657362724,
+            10.55347189542703
+          ],
+          "globalPeakStress": 67.63766703954549,
+          "refined": [],
+          "p99Stress": 24.775181522120494,
+          "contactPeakStress": 101.4587242444673,
+          "safetyFactor": 0.6282020128256722,
+          "peakTemperature": 25.0,
+          "strengthRetention": 0.9772727272727273,
+          "interlayerStress": null,
+          "deflection": 8.215065123584589,
+          "maxDisplacement": 13.026648079620514,
+          "compliance": 2833.9759700276372
+        },
+        {
+          "name": "drop-corner",
+          "impact": {
+            "energy": 0.5099541724356976,
+            "compliance": 0.05418641879917977,
+            "stiffness": 18.45480882776363,
+            "peakForce": 136.51825641179673,
+            "crush": 0.06978040722599106,
+            "deflection": 7.397435415663426,
+            "crusherEnergy": 0.004765472254073247,
+            "structureEnergy": 0.5051887001816243,
+            "structureShare": 0.9906550970427168,
+            "bottomedOut": false,
+            "rigidBackingForce": 741.5,
+            "forceAsWritten": 741.4999999999997,
+            "mass": 0.05197011678385089,
+            "stopSeconds": 0.003371203531778518,
+            "linear": true
+          },
+          "requiredSafetyFactor": 1.25,
+          "countsAs": 0.7716660106866704,
+          "peakStress": 88.07983061346393,
+          "peakAt": [
+            43.56896270303973,
+            70.44519577989375,
+            -5.860416449220546
+          ],
+          "globalPeakStress": 88.07983061346393,
+          "refined": [],
+          "p99Stress": 16.26107800499881,
+          "contactPeakStress": 88.07983061346393,
+          "safetyFactor": 0.482291256679169,
+          "peakTemperature": 25.02021243801654,
+          "strengthRetention": 0.9770430404770848,
+          "interlayerStress": null,
+          "deflection": 1.745490190162134,
+          "maxDisplacement": 9.891745656493388,
+          "compliance": 1496.6631335118984
+        },
+        {
+          "name": "drop-cg",
+          "impact": {
+            "energy": 4.2098227904554735,
+            "compliance": 0.02337763915527039,
+            "stiffness": 42.77591904632313,
+            "peakForce": 592.8407984035999,
+            "crush": 0.32657228008262723,
+            "deflection": 13.859218261601757,
+            "crusherEnergy": 0.1016626411350043,
+            "structureEnergy": 4.108160149320469,
+            "structureShare": 0.9758510877546926,
+            "bottomedOut": false,
+            "rigidBackingForce": 741.5,
+            "forceAsWritten": 741.4934254597185,
+            "mass": 0.4290287125494116,
+            "stopSeconds": 0.00640442010911259,
+            "linear": false
+          },
+          "requiredSafetyFactor": 1.25,
+          "countsAs": 0.4850589810452339,
+          "peakStress": 140.15654256483162,
+          "peakAt": [
+            79.13238744977615,
+            12.99658657362724,
+            10.55347189542703
+          ],
+          "globalPeakStress": 140.15654256483162,
+          "refined": [],
+          "p99Stress": 46.64819293371688,
+          "contactPeakStress": 197.65955636110425,
+          "safetyFactor": 0.30316186315327115,
+          "peakTemperature": 25.0,
+          "strengthRetention": 0.9772727272727273,
+          "interlayerStress": null,
+          "deflection": 15.328315015351116,
+          "maxDisplacement": 25.486583901492082,
+          "compliance": 8702.31998811152
+        },
+        {
+          "name": "preload",
+          "peakStress": 4.380607295864267,
+          "peakAt": [
+            -54.91436736484573,
+            -54.0267908336837,
+            -3.124768391779284
+          ],
+          "globalPeakStress": 4.380607295864267,
+          "refined": [],
+          "p99Stress": 1.4573301643198155,
+          "contactPeakStress": 4.472076906009236,
+          "safetyFactor": 8.856270242224506,
+          "peakTemperature": 32.47721571663784,
+          "strengthRetention": 0.8923043668563881,
+          "interlayerStress": null,
+          "deflection": 0.004290494997350906,
+          "maxDisplacement": 0.14690288681200406,
+          "compliance": 485.60837844943
+        }
+      ],
+      "minMember": 2.051736043080947,
+      "analysis": {
+        "pitch": 1.3678240287206314,
+        "contactBand": 2.051736043080947
+      },
+      "overhangArea": null,
+      "keepOutIntrusion": 0.025051149892303563,
+      "preserveMissing": 0.0,
+      "bodies": 1,
+      "boundaryCutArea": 985.0194061064317,
+      "closedBores": [
+        {
+          "id": "s1-tap",
+          "end": "p1",
+          "at": [
+            10.0,
+            10.0,
+            -3.5
+          ]
+        },
+        {
+          "id": "s2-tap",
+          "end": "p1",
+          "at": [
+            10.0,
+            -10.0,
+            -3.5
+          ]
+        },
+        {
+          "id": "s3-tap",
+          "end": "p1",
+          "at": [
+            -10.0,
+            -10.0,
+            -3.5
+          ]
+        },
+        {
+          "id": "s4-tap",
+          "end": "p1",
+          "at": [
+            -10.0,
+            10.0,
+            -3.5
+          ]
+        }
+      ],
+      "fits": [
+        {
+          "id": "arm1",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 8.4,
+          "drawn": 8.4,
+          "window": [
+            null,
+            null
+          ],
+          "target": 8.4,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1918,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 8.575,
+          "measured": 8.571,
+          "walled": true,
+          "walledSlices": 24,
+          "asBuilt": [
+            8.204,
+            8.588
+          ],
+          "clearanceAsBuilt": [
+            -0.196,
+            0.188
+          ],
+          "verdict": "holds",
+          "instruction": "arm1: prints to fit as drawn (8.57 mm in the file)"
+        },
+        {
+          "id": "arm2",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 8.4,
+          "drawn": 8.4,
+          "window": [
+            null,
+            null
+          ],
+          "target": 8.4,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1918,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 8.575,
+          "measured": 8.571,
+          "walled": true,
+          "walledSlices": 24,
+          "asBuilt": [
+            8.204,
+            8.588
+          ],
+          "clearanceAsBuilt": [
+            -0.196,
+            0.188
+          ],
+          "verdict": "holds",
+          "instruction": "arm2: prints to fit as drawn (8.57 mm in the file)"
+        },
+        {
+          "id": "arm3",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 8.4,
+          "drawn": 8.4,
+          "window": [
+            null,
+            null
+          ],
+          "target": 8.4,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1918,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 8.575,
+          "measured": 8.571,
+          "walled": true,
+          "walledSlices": 24,
+          "asBuilt": [
+            8.204,
+            8.588
+          ],
+          "clearanceAsBuilt": [
+            -0.196,
+            0.188
+          ],
+          "verdict": "holds",
+          "instruction": "arm3: prints to fit as drawn (8.57 mm in the file)"
+        },
+        {
+          "id": "arm4",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 8.4,
+          "drawn": 8.4,
+          "window": [
+            null,
+            null
+          ],
+          "target": 8.4,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1918,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 8.575,
+          "measured": 8.571,
+          "walled": true,
+          "walledSlices": 24,
+          "asBuilt": [
+            8.204,
+            8.588
+          ],
+          "clearanceAsBuilt": [
+            -0.196,
+            0.188
+          ],
+          "verdict": "holds",
+          "instruction": "arm4: prints to fit as drawn (8.57 mm in the file)"
+        },
+        {
+          "id": "m1a-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m1a-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m1b-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m1b-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m1c-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m1c-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m1d-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m1d-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m2a-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m2a-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m2b-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m2b-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m2c-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m2c-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m2d-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m2d-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m3a-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m3a-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m3b-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m3b-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m3c-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m3c-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m3d-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 17,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m3d-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m4a-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m4a-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m4b-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m4b-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m4c-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m4c-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "m4d-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "m4d-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "s1-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "s1-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "s1-tap",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 1.8327,
+          "drawn": 1.8327,
+          "window": [
+            null,
+            null
+          ],
+          "target": 1.8327,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1787,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.0077,
+          "measured": 2.0038,
+          "walled": true,
+          "walledSlices": 22,
+          "asBuilt": [
+            1.65,
+            2.007
+          ],
+          "clearanceAsBuilt": [
+            -0.183,
+            0.175
+          ],
+          "verdict": "holds",
+          "instruction": "s1-tap: prints to fit as drawn (2.01 mm in the file)"
+        },
+        {
+          "id": "s2-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "s2-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "s2-tap",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 1.8327,
+          "drawn": 1.8327,
+          "window": [
+            null,
+            null
+          ],
+          "target": 1.8327,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1787,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.0077,
+          "measured": 2.0038,
+          "walled": true,
+          "walledSlices": 22,
+          "asBuilt": [
+            1.65,
+            2.007
+          ],
+          "clearanceAsBuilt": [
+            -0.183,
+            0.175
+          ],
+          "verdict": "holds",
+          "instruction": "s2-tap: prints to fit as drawn (2.01 mm in the file)"
+        },
+        {
+          "id": "s3-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "s3-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "s3-tap",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 1.8327,
+          "drawn": 1.8327,
+          "window": [
+            null,
+            null
+          ],
+          "target": 1.8327,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1787,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.0077,
+          "measured": 2.0038,
+          "walled": true,
+          "walledSlices": 22,
+          "asBuilt": [
+            1.65,
+            2.007
+          ],
+          "clearanceAsBuilt": [
+            -0.183,
+            0.175
+          ],
+          "verdict": "holds",
+          "instruction": "s3-tap: prints to fit as drawn (2.01 mm in the file)"
+        },
+        {
+          "id": "s4-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "s4-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "s4-tap",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 1.8327,
+          "drawn": 1.8327,
+          "window": [
+            null,
+            null
+          ],
+          "target": 1.8327,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1787,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.0077,
+          "measured": 2.0038,
+          "walled": true,
+          "walledSlices": 22,
+          "asBuilt": [
+            1.65,
+            2.007
+          ],
+          "clearanceAsBuilt": [
+            -0.183,
+            0.175
+          ],
+          "verdict": "holds",
+          "instruction": "s4-tap: prints to fit as drawn (2.01 mm in the file)"
+        },
+        {
+          "id": "c1-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "c1-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "c1-tap",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 1.8327,
+          "drawn": 1.8327,
+          "window": [
+            null,
+            null
+          ],
+          "target": 1.8327,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1787,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.0077,
+          "measured": 2.0038,
+          "walled": true,
+          "walledSlices": 22,
+          "asBuilt": [
+            1.65,
+            2.007
+          ],
+          "clearanceAsBuilt": [
+            -0.183,
+            0.175
+          ],
+          "verdict": "holds",
+          "instruction": "c1-tap: prints to fit as drawn (2.01 mm in the file)"
+        },
+        {
+          "id": "c2-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "c2-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "c2-tap",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 1.8327,
+          "drawn": 1.8327,
+          "window": [
+            null,
+            null
+          ],
+          "target": 1.8327,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1787,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.0077,
+          "measured": 2.0038,
+          "walled": true,
+          "walledSlices": 22,
+          "asBuilt": [
+            1.65,
+            2.007
+          ],
+          "clearanceAsBuilt": [
+            -0.183,
+            0.175
+          ],
+          "verdict": "holds",
+          "instruction": "c2-tap: prints to fit as drawn (2.01 mm in the file)"
+        },
+        {
+          "id": "c3-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "c3-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "c3-tap",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 1.8327,
+          "drawn": 1.8327,
+          "window": [
+            null,
+            null
+          ],
+          "target": 1.8327,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1787,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.0077,
+          "measured": 2.0038,
+          "walled": true,
+          "walledSlices": 22,
+          "asBuilt": [
+            1.65,
+            2.007
+          ],
+          "clearanceAsBuilt": [
+            -0.183,
+            0.175
+          ],
+          "verdict": "holds",
+          "instruction": "c3-tap: prints to fit as drawn (2.01 mm in the file)"
+        },
+        {
+          "id": "c4-bore",
+          "fit": "normal",
+          "standard": "ISO 273 medium",
+          "mate": 2.1818,
+          "drawn": 2.4,
+          "window": [
+            2.2,
+            2.6
+          ],
+          "target": 2.4,
+          "process": "sls",
+          "size": "M2",
+          "bias": -0.175,
+          "tolerance": 0.1798,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.575,
+          "measured": 2.5711,
+          "walled": true,
+          "walledSlices": 16,
+          "asBuilt": [
+            2.216,
+            2.576
+          ],
+          "clearanceAsBuilt": [
+            0.034,
+            0.394
+          ],
+          "verdict": "holds",
+          "instruction": "c4-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+        },
+        {
+          "id": "c4-tap",
+          "fit": "nominal",
+          "standard": "as drawn",
+          "mate": 1.8327,
+          "drawn": 1.8327,
+          "window": [
+            null,
+            null
+          ],
+          "target": 1.8327,
+          "process": "sls",
+          "bias": -0.175,
+          "tolerance": 0.1787,
+          "orientation": "unknown",
+          "verdictAsBuilt": "holds",
+          "finish": "as-built",
+          "designed": 2.0077,
+          "measured": 2.0038,
+          "walled": true,
+          "walledSlices": 22,
+          "asBuilt": [
+            1.65,
+            2.007
+          ],
+          "clearanceAsBuilt": [
+            -0.183,
+            0.175
+          ],
+          "verdict": "holds",
+          "instruction": "c4-tap: prints to fit as drawn (2.01 mm in the file)"
+        }
+      ],
+      "stock": {
+        "members": [
+          {
+            "id": "arm1",
+            "type": "tube",
+            "material": {
+              "name": "cfrp-pultruded",
+              "E1": 134000.0,
+              "E2": 8410.0,
+              "E3": 8410.0,
+              "G12": 4230.0,
+              "G13": 4230.0,
+              "G23": 2900.0,
+              "nu12": 0.31,
+              "nu13": 0.31,
+              "nu23": 0.45,
+              "density": 1.5,
+              "Xt": 1650.0,
+              "Xc": 1370.0,
+              "Yt": 44.3,
+              "Yc": 199.0,
+              "S": 41.3,
+              "ILSS": 41.3,
+              "Zc": 199.0,
+              "note": "stiffest and cheapest along its length, splits across it: clamp and bolt it with care",
+              "sources": [
+                "estimate",
+                "tap-pultruded"
+              ]
+            },
+            "length": 43.54,
+            "mass": 1.436,
+            "section": {
+              "A": 21.9911,
+              "I2": 137.4447,
+              "I3": 137.4447,
+              "J": 274.8894,
+              "c2": 4.0,
+              "c3": 4.0
+            },
+            "od": 8.0,
+            "wall": 1.0,
+            "wallBucklingStress": 2971.4,
+            "cases": [
+              {
+                "name": "punch",
+                "at": [
+                  16.788,
+                  16.788,
+                  -4.5
+                ],
+                "station": 7.74,
+                "axialForce": 5.449,
+                "shearForce": 8.513,
+                "bendingMoment": 90.207,
+                "torque": 2.033,
+                "tensileStress": 2.873,
+                "compressiveStress": 2.377,
+                "shearStress": 0.793,
+                "safetyFactor": 51.838,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "roll",
+                "at": [
+                  16.788,
+                  16.788,
+                  -4.5
+                ],
+                "station": 7.74,
+                "axialForce": 4.725,
+                "shearForce": 7.579,
+                "bendingMoment": 90.506,
+                "torque": 1.109,
+                "tensileStress": 2.849,
+                "compressiveStress": 2.419,
+                "shearStress": 0.696,
+                "safetyFactor": 59.014,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "yaw",
+                "at": [
+                  16.788,
+                  16.788,
+                  -4.5
+                ],
+                "station": 7.74,
+                "axialForce": 6.326,
+                "shearForce": 8.658,
+                "bendingMoment": 114.309,
+                "torque": 1.915,
+                "tensileStress": 3.614,
+                "compressiveStress": 3.039,
+                "shearStress": 0.805,
+                "safetyFactor": 51.0,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "corner",
+                "at": [
+                  16.788,
+                  16.788,
+                  -4.5
+                ],
+                "station": 7.74,
+                "axialForce": 4.926,
+                "shearForce": 7.556,
+                "bendingMoment": 102.992,
+                "torque": 1.859,
+                "tensileStress": 3.221,
+                "compressiveStress": 2.773,
+                "shearStress": 0.705,
+                "safetyFactor": 58.198,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "wall-front",
+                "at": [
+                  39.033,
+                  39.033,
+                  -4.5
+                ],
+                "station": 39.2,
+                "axialForce": 76.094,
+                "shearForce": 87.797,
+                "bendingMoment": 618.127,
+                "torque": 220.349,
+                "tensileStress": 21.449,
+                "compressiveStress": 14.529,
+                "shearStress": 11.085,
+                "safetyFactor": 3.722,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "wall-corner",
+                "at": [
+                  39.033,
+                  39.033,
+                  -4.5
+                ],
+                "station": 39.2,
+                "axialForce": 55.222,
+                "shearForce": 71.682,
+                "bendingMoment": 584.487,
+                "torque": 124.335,
+                "tensileStress": 19.521,
+                "compressiveStress": 14.499,
+                "shearStress": 8.241,
+                "safetyFactor": 5.002,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "drop-corner",
+                "at": [
+                  16.788,
+                  16.788,
+                  -4.5
+                ],
+                "station": 7.74,
+                "axialForce": 4.402,
+                "shearForce": 40.96,
+                "bendingMoment": 426.822,
+                "torque": 28.965,
+                "tensileStress": 12.622,
+                "compressiveStress": 12.221,
+                "shearStress": 4.097,
+                "safetyFactor": 10.051,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "drop-cg",
+                "at": [
+                  39.033,
+                  39.033,
+                  -4.5
+                ],
+                "station": 39.2,
+                "axialForce": 88.089,
+                "shearForce": 125.536,
+                "bendingMoment": 1012.208,
+                "torque": 281.028,
+                "tensileStress": 33.464,
+                "compressiveStress": 25.452,
+                "shearStress": 15.354,
+                "safetyFactor": 2.686,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "preload",
+                "at": [
+                  40.001,
+                  40.001,
+                  -4.5
+                ],
+                "station": 40.57,
+                "axialForce": 21.159,
+                "shearForce": 3.412,
+                "bendingMoment": 6.694,
+                "torque": 2.516,
+                "tensileStress": 1.157,
+                "compressiveStress": 0.0,
+                "shearStress": 0.343,
+                "safetyFactor": 120.055,
+                "limitedBy": "shear"
+              }
+            ],
+            "safetyFactor": 2.686,
+            "limitedBy": "shear",
+            "worstCase": "drop-cg",
+            "gridArea": 0.898
+          },
+          {
+            "id": "arm2",
+            "type": "tube",
+            "material": {
+              "name": "cfrp-pultruded",
+              "E1": 134000.0,
+              "E2": 8410.0,
+              "E3": 8410.0,
+              "G12": 4230.0,
+              "G13": 4230.0,
+              "G23": 2900.0,
+              "nu12": 0.31,
+              "nu13": 0.31,
+              "nu23": 0.45,
+              "density": 1.5,
+              "Xt": 1650.0,
+              "Xc": 1370.0,
+              "Yt": 44.3,
+              "Yc": 199.0,
+              "S": 41.3,
+              "ILSS": 41.3,
+              "Zc": 199.0,
+              "note": "stiffest and cheapest along its length, splits across it: clamp and bolt it with care",
+              "sources": [
+                "estimate",
+                "tap-pultruded"
+              ]
+            },
+            "length": 43.54,
+            "mass": 1.436,
+            "section": {
+              "A": 21.9911,
+              "I2": 137.4447,
+              "I3": 137.4447,
+              "J": 274.8894,
+              "c2": 4.0,
+              "c3": 4.0
+            },
+            "od": 8.0,
+            "wall": 1.0,
+            "wallBucklingStress": 2971.4,
+            "cases": [
+              {
+                "name": "punch",
+                "at": [
+                  16.786,
+                  -16.786,
+                  -4.5
+                ],
+                "station": 7.74,
+                "axialForce": 5.438,
+                "shearForce": 8.452,
+                "bendingMoment": 90.426,
+                "torque": -1.857,
+                "tensileStress": 2.879,
+                "compressiveStress": 2.384,
+                "shearStress": 0.785,
+                "safetyFactor": 52.36,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "roll",
+                "at": [
+                  16.786,
+                  -16.786,
+                  -4.5
+                ],
+                "station": 7.74,
+                "axialForce": 4.76,
+                "shearForce": 7.522,
+                "bendingMoment": 90.423,
+                "torque": -0.909,
+                "tensileStress": 2.848,
+                "compressiveStress": 2.415,
+                "shearStress": 0.688,
+                "safetyFactor": 59.692,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "yaw",
+                "at": [
+                  39.998,
+                  -39.998,
+                  -4.5
+                ],
+                "station": 40.57,
+                "axialForce": 21.029,
+                "shearForce": 2.786,
+                "bendingMoment": 8.528,
+                "torque": -2.576,
+                "tensileStress": 1.204,
+                "compressiveStress": 0.0,
+                "shearStress": 0.287,
+                "safetyFactor": 142.886,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "corner",
+                "at": [
+                  39.998,
+                  -39.998,
+                  -4.5
+                ],
+                "station": 40.57,
+                "axialForce": 20.99,
+                "shearForce": 3.063,
+                "bendingMoment": 7.449,
+                "torque": -2.248,
+                "tensileStress": 1.171,
+                "compressiveStress": 0.0,
+                "shearStress": 0.308,
+                "safetyFactor": 133.679,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "wall-front",
+                "at": [
+                  17.753,
+                  -17.753,
+                  -4.5
+                ],
+                "station": 9.11,
+                "axialForce": -20.566,
+                "shearForce": 21.435,
+                "bendingMoment": 127.769,
+                "torque": 41.367,
+                "tensileStress": 2.783,
+                "compressiveStress": 4.654,
+                "shearStress": 2.525,
+                "safetyFactor": 16.348,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "wall-corner",
+                "at": [
+                  12.917,
+                  -12.917,
+                  -4.5
+                ],
+                "station": 2.27,
+                "axialForce": -68.611,
+                "shearForce": 78.538,
+                "bendingMoment": 403.541,
+                "torque": 5.079,
+                "tensileStress": 8.624,
+                "compressiveStress": 14.864,
+                "shearStress": 7.121,
+                "safetyFactor": 5.797,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "drop-corner",
+                "at": [
+                  17.753,
+                  -17.753,
+                  -4.5
+                ],
+                "station": 9.11,
+                "axialForce": -42.747,
+                "shearForce": 16.519,
+                "bendingMoment": 177.341,
+                "torque": -8.711,
+                "tensileStress": 3.217,
+                "compressiveStress": 7.105,
+                "shearStress": 1.609,
+                "safetyFactor": 25.635,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "drop-cg",
+                "at": [
+                  12.917,
+                  -12.917,
+                  -4.5
+                ],
+                "station": 2.27,
+                "axialForce": -125.727,
+                "shearForce": 135.805,
+                "bendingMoment": 683.918,
+                "torque": 3.587,
+                "tensileStress": 14.187,
+                "compressiveStress": 25.621,
+                "shearStress": 12.238,
+                "safetyFactor": 3.373,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "preload",
+                "at": [
+                  39.998,
+                  -39.998,
+                  -4.5
+                ],
+                "station": 40.57,
+                "axialForce": 20.883,
+                "shearForce": 3.504,
+                "bendingMoment": 6.861,
+                "torque": -2.566,
+                "tensileStress": 1.149,
+                "compressiveStress": 0.0,
+                "shearStress": 0.352,
+                "safetyFactor": 117.008,
+                "limitedBy": "shear"
+              }
+            ],
+            "safetyFactor": 3.373,
+            "limitedBy": "shear",
+            "worstCase": "drop-cg",
+            "gridArea": 0.898
+          },
+          {
+            "id": "arm3",
+            "type": "tube",
+            "material": {
+              "name": "cfrp-pultruded",
+              "E1": 134000.0,
+              "E2": 8410.0,
+              "E3": 8410.0,
+              "G12": 4230.0,
+              "G13": 4230.0,
+              "G23": 2900.0,
+              "nu12": 0.31,
+              "nu13": 0.31,
+              "nu23": 0.45,
+              "density": 1.5,
+              "Xt": 1650.0,
+              "Xc": 1370.0,
+              "Yt": 44.3,
+              "Yc": 199.0,
+              "S": 41.3,
+              "ILSS": 41.3,
+              "Zc": 199.0,
+              "note": "stiffest and cheapest along its length, splits across it: clamp and bolt it with care",
+              "sources": [
+                "estimate",
+                "tap-pultruded"
+              ]
+            },
+            "length": 43.54,
+            "mass": 1.436,
+            "section": {
+              "A": 21.9911,
+              "I2": 137.4447,
+              "I3": 137.4447,
+              "J": 274.8894,
+              "c2": 4.0,
+              "c3": 4.0
+            },
+            "od": 8.0,
+            "wall": 1.0,
+            "wallBucklingStress": 2971.4,
+            "cases": [
+              {
+                "name": "punch",
+                "at": [
+                  -16.987,
+                  -16.987,
+                  -4.5
+                ],
+                "station": 8.02,
+                "axialForce": 5.612,
+                "shearForce": 8.696,
+                "bendingMoment": 93.789,
+                "torque": -0.404,
+                "tensileStress": 2.985,
+                "compressiveStress": 2.474,
+                "shearStress": 0.786,
+                "safetyFactor": 52.296,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "roll",
+                "at": [
+                  -40.2,
+                  -40.2,
+                  -4.5
+                ],
+                "station": 40.85,
+                "axialForce": 27.209,
+                "shearForce": 4.077,
+                "bendingMoment": 8.447,
+                "torque": 3.112,
+                "tensileStress": 1.483,
+                "compressiveStress": 0.0,
+                "shearStress": 0.411,
+                "safetyFactor": 100.041,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "yaw",
+                "at": [
+                  -16.987,
+                  -16.987,
+                  -4.5
+                ],
+                "station": 8.02,
+                "axialForce": 6.551,
+                "shearForce": 8.845,
+                "bendingMoment": 116.227,
+                "torque": -0.766,
+                "tensileStress": 3.68,
+                "compressiveStress": 3.085,
+                "shearStress": 0.805,
+                "safetyFactor": 50.98,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "corner",
+                "at": [
+                  -40.2,
+                  -40.2,
+                  -4.5
+                ],
+                "station": 40.85,
+                "axialForce": 27.167,
+                "shearForce": 4.409,
+                "bendingMoment": 10.704,
+                "torque": 2.825,
+                "tensileStress": 1.547,
+                "compressiveStress": 0.0,
+                "shearStress": 0.437,
+                "safetyFactor": 94.187,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "wall-front",
+                "at": [
+                  -40.2,
+                  -40.2,
+                  -4.5
+                ],
+                "station": 40.85,
+                "axialForce": 16.801,
+                "shearForce": 11.81,
+                "bendingMoment": 69.023,
+                "torque": 21.841,
+                "tensileStress": 2.773,
+                "compressiveStress": 1.245,
+                "shearStress": 1.378,
+                "safetyFactor": 29.942,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "wall-corner",
+                "at": [
+                  -17.954,
+                  -17.954,
+                  -4.5
+                ],
+                "station": 9.39,
+                "axialForce": -6.898,
+                "shearForce": 17.573,
+                "bendingMoment": 120.507,
+                "torque": -0.65,
+                "tensileStress": 3.193,
+                "compressiveStress": 3.821,
+                "shearStress": 1.586,
+                "safetyFactor": 26.002,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "drop-corner",
+                "at": [
+                  -16.987,
+                  -16.987,
+                  -4.5
+                ],
+                "station": 8.02,
+                "axialForce": 51.368,
+                "shearForce": 41.975,
+                "bendingMoment": 660.152,
+                "torque": -4.891,
+                "tensileStress": 21.548,
+                "compressiveStress": 16.876,
+                "shearStress": 3.838,
+                "safetyFactor": 10.657,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "drop-cg",
+                "at": [
+                  -17.954,
+                  -17.954,
+                  -4.5
+                ],
+                "station": 9.39,
+                "axialForce": 7.236,
+                "shearForce": 44.204,
+                "bendingMoment": 95.039,
+                "torque": -2.652,
+                "tensileStress": 3.095,
+                "compressiveStress": 2.437,
+                "shearStress": 4.005,
+                "safetyFactor": 10.31,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "preload",
+                "at": [
+                  -40.2,
+                  -40.2,
+                  -4.5
+                ],
+                "station": 40.85,
+                "axialForce": 27.33,
+                "shearForce": 3.713,
+                "bendingMoment": 5.702,
+                "torque": 2.981,
+                "tensileStress": 1.409,
+                "compressiveStress": 0.0,
+                "shearStress": 0.377,
+                "safetyFactor": 109.209,
+                "limitedBy": "shear"
+              }
+            ],
+            "safetyFactor": 10.31,
+            "limitedBy": "shear",
+            "worstCase": "drop-cg",
+            "gridArea": 0.898
+          },
+          {
+            "id": "arm4",
+            "type": "tube",
+            "material": {
+              "name": "cfrp-pultruded",
+              "E1": 134000.0,
+              "E2": 8410.0,
+              "E3": 8410.0,
+              "G12": 4230.0,
+              "G13": 4230.0,
+              "G23": 2900.0,
+              "nu12": 0.31,
+              "nu13": 0.31,
+              "nu23": 0.45,
+              "density": 1.5,
+              "Xt": 1650.0,
+              "Xc": 1370.0,
+              "Yt": 44.3,
+              "Yc": 199.0,
+              "S": 41.3,
+              "ILSS": 41.3,
+              "Zc": 199.0,
+              "note": "stiffest and cheapest along its length, splits across it: clamp and bolt it with care",
+              "sources": [
+                "estimate",
+                "tap-pultruded"
+              ]
+            },
+            "length": 43.54,
+            "mass": 1.436,
+            "section": {
+              "A": 21.9911,
+              "I2": 137.4447,
+              "I3": 137.4447,
+              "J": 274.8894,
+              "c2": 4.0,
+              "c3": 4.0
+            },
+            "od": 8.0,
+            "wall": 1.0,
+            "wallBucklingStress": 2971.4,
+            "cases": [
+              {
+                "name": "punch",
+                "at": [
+                  -16.989,
+                  16.989,
+                  -4.5
+                ],
+                "station": 8.03,
+                "axialForce": 5.616,
+                "shearForce": 8.658,
+                "bendingMoment": 94.206,
+                "torque": 0.033,
+                "tensileStress": 2.997,
+                "compressiveStress": 2.486,
+                "shearStress": 0.777,
+                "safetyFactor": 52.883,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "roll",
+                "at": [
+                  -40.202,
+                  40.202,
+                  -4.5
+                ],
+                "station": 40.85,
+                "axialForce": 27.915,
+                "shearForce": 4.056,
+                "bendingMoment": 8.138,
+                "torque": -3.039,
+                "tensileStress": 1.506,
+                "compressiveStress": 0.0,
+                "shearStress": 0.408,
+                "safetyFactor": 100.746,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "yaw",
+                "at": [
+                  -40.202,
+                  40.202,
+                  -4.5
+                ],
+                "station": 40.85,
+                "axialForce": 28.027,
+                "shearForce": 3.238,
+                "bendingMoment": 7.969,
+                "torque": -3.123,
+                "tensileStress": 1.506,
+                "compressiveStress": 0.0,
+                "shearStress": 0.336,
+                "safetyFactor": 122.144,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "corner",
+                "at": [
+                  -40.202,
+                  40.202,
+                  -4.5
+                ],
+                "station": 40.85,
+                "axialForce": 27.946,
+                "shearForce": 3.514,
+                "bendingMoment": 7.192,
+                "torque": -3.098,
+                "tensileStress": 1.48,
+                "compressiveStress": 0.0,
+                "shearStress": 0.36,
+                "safetyFactor": 113.987,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "wall-front",
+                "at": [
+                  -15.055,
+                  15.055,
+                  -4.5
+                ],
+                "station": 5.29,
+                "axialForce": 6.839,
+                "shearForce": 54.659,
+                "bendingMoment": 327.274,
+                "torque": 42.07,
+                "tensileStress": 9.836,
+                "compressiveStress": 9.214,
+                "shearStress": 5.517,
+                "safetyFactor": 7.479,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "wall-corner",
+                "at": [
+                  -13.12,
+                  13.12,
+                  -4.5
+                ],
+                "station": 2.56,
+                "axialForce": -23.689,
+                "shearForce": 66.656,
+                "bendingMoment": 117.365,
+                "torque": 20.454,
+                "tensileStress": 2.338,
+                "compressiveStress": 4.493,
+                "shearStress": 6.279,
+                "safetyFactor": 6.577,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "drop-corner",
+                "at": [
+                  -16.989,
+                  16.989,
+                  -4.5
+                ],
+                "station": 8.03,
+                "axialForce": -42.766,
+                "shearForce": 20.952,
+                "bendingMoment": 216.396,
+                "torque": 15.912,
+                "tensileStress": 4.353,
+                "compressiveStress": 8.242,
+                "shearStress": 2.112,
+                "safetyFactor": 19.532,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "drop-cg",
+                "at": [
+                  -13.12,
+                  13.12,
+                  -4.5
+                ],
+                "station": 2.56,
+                "axialForce": -47.008,
+                "shearForce": 119.483,
+                "bendingMoment": 178.667,
+                "torque": 44.85,
+                "tensileStress": 3.062,
+                "compressiveStress": 7.337,
+                "shearStress": 11.374,
+                "safetyFactor": 3.631,
+                "limitedBy": "shear"
+              },
+              {
+                "name": "preload",
+                "at": [
+                  -40.202,
+                  40.202,
+                  -4.5
+                ],
+                "station": 40.85,
+                "axialForce": 28.089,
+                "shearForce": 3.609,
+                "bendingMoment": 5.639,
+                "torque": -3.027,
+                "tensileStress": 1.441,
+                "compressiveStress": 0.0,
+                "shearStress": 0.368,
+                "safetyFactor": 111.728,
+                "limitedBy": "shear"
+              }
+            ],
+            "safetyFactor": 3.631,
+            "limitedBy": "shear",
+            "worstCase": "drop-cg",
+            "gridArea": 0.898
+          }
+        ],
+        "joints": [
+          {
+            "id": "arm1/0",
+            "member": "arm1",
+            "type": "bond",
+            "span": [
+              0.0,
+              43.54
+            ],
+            "length": 43.54,
+            "area": 1094.3,
+            "contact": 1.0,
+            "adhesive": {
+              "name": "polyurethane",
+              "gap": 0.2,
+              "overlap": 12.7,
+              "strength": 5.0,
+              "limitedBy": "the member (no more than it holds on the nylon it joins the member to)",
+              "source": "estimate",
+              "tension": 5.0
+            },
+            "cases": [
+              {
+                "name": "punch",
+                "axialForce": 205.812,
+                "torque": 7.246,
+                "shearForce": 36.288,
+                "bendingMoment": 413.62,
+                "meanShear": 0.188,
+                "bondShear": 1.373,
+                "bondPeel": 0.193,
+                "wallPressure": 1.344,
+                "wallStress": 11.882,
+                "safetyFactor": 3.606,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "roll",
+                "axialForce": 205.861,
+                "torque": 7.238,
+                "shearForce": 36.226,
+                "bendingMoment": 414.716,
+                "meanShear": 0.188,
+                "bondShear": 1.374,
+                "bondPeel": 0.193,
+                "wallPressure": 1.344,
+                "wallStress": 11.87,
+                "safetyFactor": 3.603,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "yaw",
+                "axialForce": 205.811,
+                "torque": 7.254,
+                "shearForce": 36.148,
+                "bendingMoment": 414.48,
+                "meanShear": 0.188,
+                "bondShear": 1.36,
+                "bondPeel": 0.194,
+                "wallPressure": 1.346,
+                "wallStress": 11.911,
+                "safetyFactor": 3.64,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "corner",
+                "axialForce": 205.863,
+                "torque": 7.261,
+                "shearForce": 36.149,
+                "bendingMoment": 415.21,
+                "meanShear": 0.188,
+                "bondShear": 1.37,
+                "bondPeel": 0.193,
+                "wallPressure": 1.344,
+                "wallStress": 11.885,
+                "safetyFactor": 3.614,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "wall-front",
+                "axialForce": 203.56,
+                "torque": 4.509,
+                "shearForce": 36.37,
+                "bendingMoment": 398.146,
+                "meanShear": 0.186,
+                "bondShear": 2.789,
+                "bondPeel": 0.082,
+                "wallPressure": 1.682,
+                "wallStress": 11.868,
+                "safetyFactor": 1.792,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "wall-corner",
+                "axialForce": 201.511,
+                "torque": 6.701,
+                "shearForce": 37.423,
+                "bendingMoment": 379.319,
+                "meanShear": 0.184,
+                "bondShear": 2.422,
+                "bondPeel": 0.095,
+                "wallPressure": 1.566,
+                "wallStress": 12.611,
+                "safetyFactor": 2.062,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "drop-corner",
+                "axialForce": 207.817,
+                "torque": 7.587,
+                "shearForce": 40.579,
+                "bendingMoment": 417.027,
+                "meanShear": 0.19,
+                "bondShear": 1.566,
+                "bondPeel": 0.175,
+                "wallPressure": 1.429,
+                "wallStress": 11.752,
+                "safetyFactor": 3.173,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "drop-cg",
+                "axialForce": 198.857,
+                "torque": 6.294,
+                "shearForce": 40.147,
+                "bendingMoment": 351.854,
+                "meanShear": 0.182,
+                "bondShear": 3.511,
+                "bondPeel": 0.033,
+                "wallPressure": 2.55,
+                "wallStress": 20.147,
+                "safetyFactor": 1.424,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "preload",
+                "axialForce": 205.802,
+                "torque": 5.88,
+                "shearForce": 39.67,
+                "bendingMoment": 341.546,
+                "meanShear": 0.188,
+                "bondShear": 1.374,
+                "bondPeel": 0.19,
+                "wallPressure": 0.665,
+                "wallStress": 5.819,
+                "safetyFactor": 3.606,
+                "limitedBy": "bond shear"
+              }
+            ],
+            "safetyFactor": 1.424,
+            "limitedBy": "bond shear",
+            "worstCase": "drop-cg",
+            "endFace": "not counted as joined (the member's last 1.4 mm carries nothing)",
+            "lengthForGoal": 38.2
+          },
+          {
+            "id": "arm2/0",
+            "member": "arm2",
+            "type": "bond",
+            "span": [
+              0.0,
+              43.54
+            ],
+            "length": 43.54,
+            "area": 1094.3,
+            "contact": 1.0,
+            "adhesive": {
+              "name": "polyurethane",
+              "gap": 0.2,
+              "overlap": 12.7,
+              "strength": 5.0,
+              "limitedBy": "the member (no more than it holds on the nylon it joins the member to)",
+              "source": "estimate",
+              "tension": 5.0
+            },
+            "cases": [
+              {
+                "name": "punch",
+                "axialForce": 205.956,
+                "torque": -7.072,
+                "shearForce": 36.241,
+                "bendingMoment": 412.928,
+                "meanShear": 0.188,
+                "bondShear": 1.245,
+                "bondPeel": 0.132,
+                "wallPressure": 1.684,
+                "wallStress": 12.271,
+                "safetyFactor": 3.61,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "roll",
+                "axialForce": 206.006,
+                "torque": -7.064,
+                "shearForce": 36.181,
+                "bendingMoment": 414.028,
+                "meanShear": 0.188,
+                "bondShear": 1.249,
+                "bondPeel": 0.132,
+                "wallPressure": 1.684,
+                "wallStress": 12.271,
+                "safetyFactor": 3.61,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "yaw",
+                "axialForce": 205.955,
+                "torque": -7.068,
+                "shearForce": 36.094,
+                "bendingMoment": 413.769,
+                "meanShear": 0.188,
+                "bondShear": 1.299,
+                "bondPeel": 0.122,
+                "wallPressure": 1.673,
+                "wallStress": 12.342,
+                "safetyFactor": 3.589,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "corner",
+                "axialForce": 205.953,
+                "torque": -7.052,
+                "shearForce": 36.03,
+                "bendingMoment": 414.143,
+                "meanShear": 0.188,
+                "bondShear": 1.29,
+                "bondPeel": 0.123,
+                "wallPressure": 1.674,
+                "wallStress": 12.324,
+                "safetyFactor": 3.595,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "wall-front",
+                "axialForce": 203.662,
+                "torque": -5.339,
+                "shearForce": 36.671,
+                "bendingMoment": 399.15,
+                "meanShear": 0.186,
+                "bondShear": 1.409,
+                "bondPeel": 0.129,
+                "wallPressure": 1.713,
+                "wallStress": 12.213,
+                "safetyFactor": 3.534,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "wall-corner",
+                "axialForce": 205.964,
+                "torque": -3.393,
+                "shearForce": 35.602,
+                "bendingMoment": 419.844,
+                "meanShear": 0.188,
+                "bondShear": 1.283,
+                "bondPeel": 0.242,
+                "wallPressure": 1.649,
+                "wallStress": 13.13,
+                "safetyFactor": 3.374,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "drop-corner",
+                "axialForce": 205.889,
+                "torque": -6.292,
+                "shearForce": 37.932,
+                "bendingMoment": 402.37,
+                "meanShear": 0.188,
+                "bondShear": 1.414,
+                "bondPeel": 0.117,
+                "wallPressure": 1.694,
+                "wallStress": 12.385,
+                "safetyFactor": 3.523,
+                "limitedBy": "bond shear"
+              },
+              {
+                "name": "drop-cg",
+                "axialForce": 205.868,
+                "torque": -0.252,
+                "shearForce": 36.286,
+                "bendingMoment": 419.742,
+                "meanShear": 0.188,
+                "bondShear": 1.393,
+                "bondPeel": 0.254,
+                "wallPressure": 1.728,
+                "wallStress": 13.79,
+                "safetyFactor": 3.213,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "preload",
+                "axialForce": 205.944,
+                "torque": -5.693,
+                "shearForce": 39.618,
+                "bendingMoment": 340.96,
+                "meanShear": 0.188,
+                "bondShear": 1.284,
+                "bondPeel": 0.126,
+                "wallPressure": 0.838,
+                "wallStress": 6.166,
+                "safetyFactor": 3.875,
+                "limitedBy": "bond shear"
+              }
+            ],
+            "safetyFactor": 3.589,
+            "limitedBy": "wall splitting (hoop tension)",
+            "worstCase": "yaw",
+            "endFace": "not counted as joined (the member's last 1.4 mm carries nothing)"
+          },
+          {
+            "id": "arm3/0",
+            "member": "arm3",
+            "type": "bond",
+            "span": [
+              0.0,
+              43.54
+            ],
+            "length": 43.54,
+            "area": 1094.3,
+            "contact": 1.0,
+            "adhesive": {
+              "name": "polyurethane",
+              "gap": 0.2,
+              "overlap": 12.7,
+              "strength": 5.0,
+              "limitedBy": "the member (no more than it holds on the nylon it joins the member to)",
+              "source": "estimate",
+              "tension": 5.0
+            },
+            "cases": [
+              {
+                "name": "punch",
+                "axialForce": 319.453,
+                "torque": -8.091,
+                "shearForce": 37.853,
+                "bendingMoment": 299.154,
+                "meanShear": 0.292,
+                "bondShear": 1.914,
+                "bondPeel": 0.073,
+                "wallPressure": 1.928,
+                "wallStress": 28.835,
+                "safetyFactor": 1.536,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "roll",
+                "axialForce": 319.406,
+                "torque": -8.049,
+                "shearForce": 37.667,
+                "bendingMoment": 299.167,
+                "meanShear": 0.292,
+                "bondShear": 2.038,
+                "bondPeel": 0.059,
+                "wallPressure": 1.953,
+                "wallStress": 28.776,
+                "safetyFactor": 1.539,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "yaw",
+                "axialForce": 319.453,
+                "torque": -8.084,
+                "shearForce": 37.73,
+                "bendingMoment": 299.488,
+                "meanShear": 0.292,
+                "bondShear": 1.898,
+                "bondPeel": 0.074,
+                "wallPressure": 1.923,
+                "wallStress": 28.822,
+                "safetyFactor": 1.537,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "corner",
+                "axialForce": 319.405,
+                "torque": -8.076,
+                "shearForce": 37.596,
+                "bendingMoment": 299.349,
+                "meanShear": 0.292,
+                "bondShear": 2.03,
+                "bondPeel": 0.059,
+                "wallPressure": 1.95,
+                "wallStress": 28.765,
+                "safetyFactor": 1.54,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "wall-front",
+                "axialForce": 321.436,
+                "torque": -7.588,
+                "shearForce": 37.316,
+                "bendingMoment": 313.002,
+                "meanShear": 0.294,
+                "bondShear": 1.945,
+                "bondPeel": 0.089,
+                "wallPressure": 1.93,
+                "wallStress": 28.85,
+                "safetyFactor": 1.536,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "wall-corner",
+                "axialForce": 323.233,
+                "torque": -8.359,
+                "shearForce": 37.061,
+                "bendingMoment": 317.622,
+                "meanShear": 0.295,
+                "bondShear": 1.859,
+                "bondPeel": 0.074,
+                "wallPressure": 1.893,
+                "wallStress": 28.421,
+                "safetyFactor": 1.559,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "drop-corner",
+                "axialForce": 317.564,
+                "torque": -7.891,
+                "shearForce": 36.191,
+                "bendingMoment": 283.049,
+                "meanShear": 0.29,
+                "bondShear": 1.467,
+                "bondPeel": 0.128,
+                "wallPressure": 1.758,
+                "wallStress": 28.518,
+                "safetyFactor": 1.553,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "drop-cg",
+                "axialForce": 325.523,
+                "torque": -8.493,
+                "shearForce": 36.148,
+                "bendingMoment": 325.685,
+                "meanShear": 0.297,
+                "bondShear": 1.508,
+                "bondPeel": 0.113,
+                "wallPressure": 1.775,
+                "wallStress": 28.133,
+                "safetyFactor": 1.575,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "preload",
+                "axialForce": 319.462,
+                "torque": -6.368,
+                "shearForce": 35.226,
+                "bendingMoment": 348.752,
+                "meanShear": 0.292,
+                "bondShear": 2.052,
+                "bondPeel": 0.059,
+                "wallPressure": 0.978,
+                "wallStress": 14.402,
+                "safetyFactor": 2.436,
+                "limitedBy": "bond shear"
+              }
+            ],
+            "safetyFactor": 1.536,
+            "limitedBy": "wall splitting (hoop tension)",
+            "worstCase": "punch",
+            "endFace": "not counted as joined (the member's last 1.4 mm carries nothing)"
+          },
+          {
+            "id": "arm4/0",
+            "member": "arm4",
+            "type": "bond",
+            "span": [
+              0.0,
+              43.54
+            ],
+            "length": 43.54,
+            "area": 1094.3,
+            "contact": 1.0,
+            "adhesive": {
+              "name": "polyurethane",
+              "gap": 0.2,
+              "overlap": 12.7,
+              "strength": 5.0,
+              "limitedBy": "the member (no more than it holds on the nylon it joins the member to)",
+              "source": "estimate",
+              "tension": 5.0
+            },
+            "cases": [
+              {
+                "name": "punch",
+                "axialForce": 320.169,
+                "torque": 7.996,
+                "shearForce": 37.87,
+                "bendingMoment": 300.307,
+                "meanShear": 0.293,
+                "bondShear": 1.882,
+                "bondPeel": 0.056,
+                "wallPressure": 1.14,
+                "wallStress": 22.672,
+                "safetyFactor": 1.954,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "roll",
+                "axialForce": 320.122,
+                "torque": 7.955,
+                "shearForce": 37.683,
+                "bendingMoment": 300.314,
+                "meanShear": 0.293,
+                "bondShear": 1.992,
+                "bondPeel": 0.053,
+                "wallPressure": 1.168,
+                "wallStress": 22.617,
+                "safetyFactor": 1.959,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "yaw",
+                "axialForce": 320.171,
+                "torque": 7.993,
+                "shearForce": 37.752,
+                "bendingMoment": 300.686,
+                "meanShear": 0.293,
+                "bondShear": 2.004,
+                "bondPeel": 0.052,
+                "wallPressure": 1.176,
+                "wallStress": 22.637,
+                "safetyFactor": 1.957,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "corner",
+                "axialForce": 320.173,
+                "torque": 7.96,
+                "shearForce": 37.699,
+                "bendingMoment": 300.843,
+                "meanShear": 0.293,
+                "bondShear": 1.999,
+                "bondPeel": 0.053,
+                "wallPressure": 1.174,
+                "wallStress": 22.633,
+                "safetyFactor": 1.957,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "wall-front",
+                "axialForce": 322.183,
+                "torque": 7.074,
+                "shearForce": 37.164,
+                "bendingMoment": 310.107,
+                "meanShear": 0.294,
+                "bondShear": 2.085,
+                "bondPeel": 0.0,
+                "wallPressure": 1.127,
+                "wallStress": 21.489,
+                "safetyFactor": 2.061,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "wall-corner",
+                "axialForce": 320.163,
+                "torque": 6.376,
+                "shearForce": 37.488,
+                "bendingMoment": 304.475,
+                "meanShear": 0.293,
+                "bondShear": 1.922,
+                "bondPeel": 0.019,
+                "wallPressure": 1.123,
+                "wallStress": 22.558,
+                "safetyFactor": 1.964,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "drop-corner",
+                "axialForce": 320.233,
+                "torque": 6.896,
+                "shearForce": 39.414,
+                "bendingMoment": 296.404,
+                "meanShear": 0.293,
+                "bondShear": 2.102,
+                "bondPeel": 0.056,
+                "wallPressure": 1.289,
+                "wallStress": 23.057,
+                "safetyFactor": 1.921,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "drop-cg",
+                "axialForce": 320.248,
+                "torque": 4.724,
+                "shearForce": 38.149,
+                "bendingMoment": 305.92,
+                "meanShear": 0.293,
+                "bondShear": 1.902,
+                "bondPeel": 0.0,
+                "wallPressure": 1.121,
+                "wallStress": 22.691,
+                "safetyFactor": 1.952,
+                "limitedBy": "wall splitting (hoop tension)"
+              },
+              {
+                "name": "preload",
+                "axialForce": 320.181,
+                "torque": 5.88,
+                "shearForce": 34.676,
+                "bendingMoment": 361.611,
+                "meanShear": 0.293,
+                "bondShear": 2.005,
+                "bondPeel": 0.053,
+                "wallPressure": 0.585,
+                "wallStress": 11.313,
+                "safetyFactor": 2.493,
+                "limitedBy": "bond shear"
+              }
+            ],
+            "safetyFactor": 1.954,
+            "limitedBy": "wall splitting (hoop tension)",
+            "worstCase": "punch",
+            "endFace": "not counted as joined (the member's last 1.4 mm carries nothing)"
+          }
+        ],
+        "mass": 5.745,
+        "safetyFactor": 1.536,
+        "limitedBy": "joint arm3/0",
+        "mode": "wall splitting (hoop tension)",
+        "interface": "stuck (shared nodes): a bond; a clamp while its slip check holds",
+        "margin": 0.7682
+      },
+      "printedBodies": 1,
+      "stockMass": 5.744849593414732,
+      "assemblyMass": 156.05491321028808,
+      "thermal": {
+        "maxTemperature": 69.9999999929425,
+        "minRetention": 0.5357142857747785,
+        "expansion": 0.000109,
+        "stressFree": 25.0,
+        "heatIn": 0.0
+      },
+      "durability": {
+        "temperature": 50.0,
+        "target": 1.5,
+        "constrain": true,
+        "material": "pa12",
+        "data": {
+          "fatigueStrength": 0.3,
+          "fatigueSlope": 10.0,
+          "creepRatio": 0.8,
+          "creepExponent": 0.2,
+          "rupturePerDecade": 0.1,
+          "source": "Van Hooreweder & Kruth, CIRP Annals 2014 (SLS PA12, 18 MPa at 1e6, R=-1); creep from PA12 creep-modulus data, dry",
+          "quality": "measured"
+        },
+        "cases": [
+          {
+            "name": "punch",
+            "temperature": 27.79364711992269,
+            "strengthAtTemperature": 47.27633686368029,
+            "cycles": 100000.0,
+            "fatigueStrength": 19.136745129300362,
+            "life": 208008865336.69962,
+            "damage": 4.807487403872527e-07
+          },
+          {
+            "name": "roll",
+            "temperature": 27.79364711992269,
+            "strengthAtTemperature": 47.27633686368029,
+            "cycles": 100000.0,
+            "fatigueStrength": 19.136745129300362,
+            "life": 206353116356.0302,
+            "damage": 4.846062020573779e-07
+          },
+          {
+            "name": "yaw",
+            "temperature": 27.79364711992269,
+            "strengthAtTemperature": 47.27633686368029,
+            "cycles": 100000.0,
+            "fatigueStrength": 19.136745129300362,
+            "life": 193169873757.89456,
+            "damage": 5.176790668990803e-07
+          },
+          {
+            "name": "preload",
+            "temperature": 32.47721571663784,
+            "strengthAtTemperature": 44.615218342819404,
+            "hours": 8760.0,
+            "creepRatio": 1.3838142224206509,
+            "creepDeflection": 0.01146216848847479,
+            "ruptureStrength": 22.56412835712236,
+            "creepSafetyFactor": 4.479055038471625
+          }
+        ],
+        "warnings": [
+          "fasteners m1a, m1b, m1c, m1d, m2a, m2b, m2c, m2d, m3a, m3b, m3c, m3d, m4a, m4b, m4c, m4d, s1, s2, s3, s4, c1, c2, c3, c4: about 26% of the clamp load is left after 8760 h at 50 C; clamp on a metal compression limiter or insert, or add a spring washer"
+        ],
+        "fatigueDamage": 1.4830340093437108e-06,
+        "fatigueSafetyFactor": 3.827232879206668,
+        "creepSafetyFactor": 4.479055038471625,
+        "safetyFactor": 3.827232879206668,
+        "fatigueLimitedBy": "in-plane",
+        "joints": [
+          {
+            "id": "m1a",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m1b",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m1c",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m1d",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m2a",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m2b",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m2c",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m2d",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m3a",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m3b",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m3c",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m3d",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m4a",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m4b",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m4c",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "m4d",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "s1",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "s2",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "s3",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "s4",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "c1",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "c2",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "c3",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          },
+          {
+            "id": "c4",
+            "preload": 85.21570072862313,
+            "bearingStress": 12.5,
+            "preloadRetention": 0.25750256974012775,
+            "bearingSafetyFactor": 1.4305488385410285,
+            "hours": 8760.0,
+            "temperature": 50.0
+          }
+        ]
+      },
+      "serviceEnvelope": {
+        "cases": [
+          {
+            "name": "punch",
+            "utilization": 0.09449657540604484,
+            "limitedBy": "in-plane",
+            "heldHours": null,
+            "cycles": 208008865336.69962,
+            "maxTemperature": null,
+            "declared": {
+              "cycles": 100000.0
+            }
+          },
+          {
+            "name": "roll",
+            "utilization": 0.09457212576360752,
+            "limitedBy": "in-plane",
+            "heldHours": null,
+            "cycles": 206353116356.0302,
+            "maxTemperature": null,
+            "declared": {
+              "cycles": 100000.0
+            }
+          },
+          {
+            "name": "yaw",
+            "utilization": 0.09519854586420831,
+            "limitedBy": "in-plane",
+            "heldHours": null,
+            "cycles": 193169873757.89456,
+            "maxTemperature": null,
+            "declared": {
+              "cycles": 100000.0
+            }
+          },
+          {
+            "name": "corner",
+            "utilization": 0.09501370501218884,
+            "limitedBy": "in-plane",
+            "heldHours": null,
+            "cycles": 196960894374.88895,
+            "maxTemperature": null,
+            "declared": {}
+          },
+          {
+            "name": "wall-front",
+            "utilization": 2.9101545099898387,
+            "limitedBy": "in-plane",
+            "heldHours": 0.0,
+            "cycles": 1.0,
+            "maxTemperature": null,
+            "declared": {}
+          },
+          {
+            "name": "wall-corner",
+            "utilization": 1.5918446289306984,
+            "limitedBy": "in-plane",
+            "heldHours": 0.0,
+            "cycles": 1.0,
+            "maxTemperature": null,
+            "declared": {}
+          },
+          {
+            "name": "drop-corner",
+            "utilization": 2.073435887860647,
+            "limitedBy": "in-plane",
+            "heldHours": 0.0,
+            "cycles": 1.0,
+            "maxTemperature": null,
+            "declared": {}
+          },
+          {
+            "name": "drop-cg",
+            "utilization": 3.2985679319909207,
+            "limitedBy": "in-plane",
+            "heldHours": 0.0,
+            "cycles": 1.0,
+            "maxTemperature": null,
+            "declared": {}
+          },
+          {
+            "name": "preload",
+            "utilization": 0.11291435024557486,
+            "limitedBy": "in-plane",
+            "heldHours": null,
+            "cycles": 35055094740.838394,
+            "maxTemperature": null,
+            "declared": {}
+          }
+        ],
+        "data": {
+          "fatigueStrength": 0.3,
+          "fatigueSlope": 10.0,
+          "creepRatio": 0.8,
+          "creepExponent": 0.2,
+          "rupturePerDecade": 0.1,
+          "source": "Van Hooreweder & Kruth, CIRP Annals 2014 (SLS PA12, 18 MPa at 1e6, R=-1); creep from PA12 creep-modulus data, dry",
+          "quality": "measured"
+        },
+        "undeclared": [
+          "corner",
+          "wall-front",
+          "wall-corner",
+          "drop-corner",
+          "drop-cg",
+          "preload"
+        ],
+        "heldHours": 0.0,
+        "cycles": 1.0,
+        "maxTemperature": null,
+        "trade": [
+          {
+            "cycles": 1000.0,
+            "allowed": 0.6415407599947128,
+            "staticSafetyFactor": 1.5587474130377021,
+            "met": false,
+            "stressTo": 0.19449069208876268
+          },
+          {
+            "cycles": 10000.0,
+            "allowed": 0.5095939393902742,
+            "staticSafetyFactor": 1.9623467288415821,
+            "met": false,
+            "stressTo": 0.15448944811717064
+          },
+          {
+            "cycles": 100000.0,
+            "allowed": 0.404784854302069,
+            "staticSafetyFactor": 2.4704481636898254,
+            "met": false,
+            "stressTo": 0.12271533060644063
+          },
+          {
+            "cycles": 1000000.0,
+            "allowed": 0.32153203876088793,
+            "staticSafetyFactor": 3.1101099717893583,
+            "met": false,
+            "stressTo": 0.09747625193422058
+          },
+          {
+            "hours": 720.0,
+            "label": "a month",
+            "allowed": 0.6142667503568731,
+            "staticSafetyFactor": 1.6279572342455877,
+            "met": false,
+            "stressTo": 0.1862222525112949
+          },
+          {
+            "hours": 8760.0,
+            "label": "a year",
+            "allowed": 0.5057495893831918,
+            "staticSafetyFactor": 1.9772630981660155,
+            "met": false,
+            "stressTo": 0.15332398780641027
+          },
+          {
+            "hours": 87600.0,
+            "label": "ten years",
+            "allowed": 0.40574958938319183,
+            "staticSafetyFactor": 2.4645742747889643,
+            "met": false,
+            "stressTo": 0.12300780149108315
+          }
+        ],
+        "note": "corner, wall-front, wall-corner, drop-corner ...: no duration or repeat count given, so checked as applied once, briefly, at room temperature. As delivered the material data puts the limits at: held about 0 h; applied about 1 times (each alone, at a safety factor of 1; measured data). Give the case `hours`, `cycles` or `temperature` to design for its real service; serviceEnvelope.trade lists what each life costs."
+      },
+      "failure": {
+        "criterion": "pressure-modified von Mises",
+        "compressionRatio": 1.15,
+        "compressionSource": "nylons and polypropylene yield 1.1-1.3x higher in compression (pressure-dependent yield); low end for printed parts",
+        "compressionQuality": "assumed",
+        "layers": {
+          "checked": false,
+          "process": "sls",
+          "interlayer": 0.9,
+          "ifBuiltAlong": {
+            "x": {
+              "interlayerStress": 143.95769727433623,
+              "safetyFactor": 0.271818982405914
+            },
+            "y": {
+              "interlayerStress": 129.7324614665019,
+              "safetyFactor": 0.3016240834427745
+            },
+            "z": {
+              "interlayerStress": 97.6529704170353,
+              "safetyFactor": 0.40070910915969943
+            }
+          },
+          "note": "no build direction given, so the layer bonds were not checked and the safety factor 0.49 is the solid material's. pa12 is printed in layers (sls: bonds about 90% of the in-plane strength): built along x the bonds would hold 0.27x the loads, along z 0.40x. Give the study process.buildDirection (or 'auto') to design for it."
+        }
+      },
+      "warnings": [
+        "impact case 'drop-cg': the part gives 13.9 mm at the patch, over 5% of its 201 mm size; the linear reading of its force and stress is rough",
+        "joint arm3/0 (bond) holds 1.54x its loads in case 'punch' (wall splitting (hoop tension)), under the safety factor 2: less pressure on the wall: a longer joint, or a thicker-walled member",
+        "joint arm4/0 (bond) holds 1.95x its loads in case 'punch' (wall splitting (hoop tension)), under the safety factor 2: less pressure on the wall: a longer joint, or a thicker-walled member",
+        "first natural frequency 270.0 Hz is under vibration.minFrequency 546 Hz (the mode moves mostly along rotation): stiffen the path from the carried masses to the supports in that direction",
+        "the mesh lost 15% of the optimized solid cells (22% of the surface cells, 25% of the thin members): the meshed part is softer and weaker than the design the optimizer found, so the outcome search goes heavier than the design needs. The verified numbers are the ones that hold.",
+        "the part closes over 4 bore end(s) (s1-tap p1, s2-tap p1, s3-tap p1, s4-tap p1): no fastener goes through, so it does not pass. Extend the keep-out over the head and the driver's reach if this repeats."
+      ],
+      "margin": 0.24252949052261694,
+      "passes": false,
+      "start": "cold",
+      "alternative": null,
+      "optimizer": {
+        "iterations": 91,
+        "converged": false,
+        "seconds": 18850.612166404724,
+        "compliance": 19330841.474388484,
+        "caseCompliance": [
+          1246.023699154728,
+          169.6625858352054,
+          494.33555862889625,
+          -246.68892299127765,
+          6300745.200328189,
+          6266964.4436075175,
+          53749468.66632803,
+          22598053.477968708,
+          12897.783677186933
+        ],
+        "achievedVolumeFraction": 0.26506548455078116,
+        "escape": {
+          "holes": [],
+          "filled": 0.0,
+          "rounds": 0,
+          "left": 2,
+          "sealed": 2,
+          "unopened": 2
+        }
+      },
+      "reconstruction": {
+        "isoTriangles": 444528,
+        "bodies": 1,
+        "droppedFragmentVolume": 0.0,
+        "pinchesFilled": 203,
+        "triangles": 235368,
+        "volume": 148821.84516522114,
+        "watertight": true
+      },
+      "stl": "/home/user/runs/frame-carbon/hum-frame-carbon-30.stl",
+      "field": "/home/user/runs/frame-carbon/hum-frame-carbon-30.field.npz",
+      "render": "/home/user/runs/frame-carbon/hum-frame-carbon-30.png"
+    }
+  ],
+  "best": null,
+  "seconds": 19664.1041970253,
+  "warnings": [
+    "preserve 'm1a-seat': 38% of it is inside keep-out 'm1a-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm1b-seat': 38% of it is inside keep-out 'm1b-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm1c-seat': 38% of it is inside keep-out 'm1c-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm1d-seat': 38% of it is inside keep-out 'm1d-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm2a-seat': 38% of it is inside keep-out 'm2a-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm2b-seat': 38% of it is inside keep-out 'm2b-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm2c-seat': 38% of it is inside keep-out 'm2c-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm2d-seat': 38% of it is inside keep-out 'm2d-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm3a-seat': 38% of it is inside keep-out 'm3a-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm3b-seat': 38% of it is inside keep-out 'm3b-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm3c-seat': 38% of it is inside keep-out 'm3c-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm3d-seat': 38% of it is inside keep-out 'm3d-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm4a-seat': 38% of it is inside keep-out 'm4a-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm4b-seat': 38% of it is inside keep-out 'm4b-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm4c-seat': 38% of it is inside keep-out 'm4c-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'm4d-seat': 38% of it is inside keep-out 'm4d-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 's1-seat': 50% of it is inside keep-out 'stack' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 's2-seat': 50% of it is inside keep-out 'stack' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 's3-seat': 50% of it is inside keep-out 'stack' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 's4-seat': 50% of it is inside keep-out 'stack' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'c1-thread': 33% of it is inside keep-out 'c1-bore' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'c2-thread': 33% of it is inside keep-out 'c2-bore' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'c3-thread': 33% of it is inside keep-out 'c3-bore' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "preserve 'c4-thread': 33% of it is inside keep-out 'c4-bore' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+    "16640 cells not connected to a support were removed"
+  ],
+  "methodChoice": {
+    "method": "search",
+    "reason": "no passing search part to compare"
+  },
+  "viewer": "/home/user/runs/frame-carbon/viewer.html",
+  "deliver": {
+    "outcome": 0,
+    "passes": false,
+    "stl": "/home/user/runs/frame-carbon/hum-frame-carbon-30.stl",
+    "render": "/home/user/runs/frame-carbon/hum-frame-carbon-30.png",
+    "material": "pa12",
+    "mass": 150.31006361687335,
+    "volumeFraction": 0.3,
+    "safetyFactor": 0.4850589810452339,
+    "safetyFactorMethod": "voxel",
+    "target": {
+      "safetyFactor": 2.0
+    },
+    "governedBy": "safetyFactor",
+    "maxDeflection": 15.328315015351116,
+    "cases": [
+      {
+        "name": "punch",
+        "safetyFactor": 10.58239407833642,
+        "deflection": 0.046235030908222216,
+        "peakStress": 3.8847408098785587,
+        "peakAt": [
+          -41.236127077639416,
+          62.23825160756998,
+          -1.7569443630586523
+        ]
+      },
+      {
+        "name": "roll",
+        "safetyFactor": 10.573940174503425,
+        "deflection": 0.026833432030707864,
+        "peakStress": 3.8878466743605626,
+        "peakAt": [
+          -41.236127077639416,
+          62.23825160756998,
+          -1.7569443630586523
+        ]
+      },
+      {
+        "name": "yaw",
+        "safetyFactor": 10.50436212992586,
+        "deflection": 0.01271988446349715,
+        "peakStress": 3.913598715833766,
+        "peakAt": [
+          -41.236127077639416,
+          62.23825160756998,
+          -1.7569443630586523
+        ]
+      },
+      {
+        "name": "corner",
+        "safetyFactor": 10.52479744760732,
+        "deflection": 0.009987900125650121,
+        "peakStress": 3.905999934628338,
+        "peakAt": [
+          -41.236127077639416,
+          62.23825160756998,
+          -1.7569443630586523
+        ]
+      },
+      {
+        "name": "wall-front",
+        "safetyFactor": 0.34362436653010964,
+        "deflection": 3.6413500388128126,
+        "peakStress": 123.6174798666469,
+        "peakAt": [
+          43.56896270303973,
+          70.44519577989375,
+          -4.492592420499914
+        ]
+      },
+      {
+        "name": "wall-corner",
+        "safetyFactor": 0.6282020128256722,
+        "deflection": 8.215065123584589,
+        "peakStress": 67.63766703954549,
+        "peakAt": [
+          79.13238744977615,
+          12.99658657362724,
+          10.55347189542703
+        ]
+      },
+      {
+        "name": "drop-corner",
+        "safetyFactor": 0.482291256679169,
+        "deflection": 1.745490190162134,
+        "peakStress": 88.07983061346393,
+        "peakAt": [
+          43.56896270303973,
+          70.44519577989375,
+          -5.860416449220546
+        ]
+      },
+      {
+        "name": "drop-cg",
+        "safetyFactor": 0.30316186315327115,
+        "deflection": 15.328315015351116,
+        "peakStress": 140.15654256483162,
+        "peakAt": [
+          79.13238744977615,
+          12.99658657362724,
+          10.55347189542703
+        ]
+      },
+      {
+        "name": "preload",
+        "safetyFactor": 8.856270242224506,
+        "deflection": 0.004290494997350906,
+        "peakStress": 4.380607295864267,
+        "peakAt": [
+          -54.91436736484573,
+          -54.0267908336837,
+          -3.124768391779284
+        ]
+      }
+    ],
+    "p5Member": null,
+    "durabilitySafetyFactor": 3.827232879206668,
+    "bodies": 1,
+    "keepOutIntrusion": 0.025051149892303563,
+    "preserveMissing": 0.0,
+    "fits": [
+      {
+        "id": "m1a-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m1a-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m1b-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m1b-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m1c-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m1c-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m1d-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m1d-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m2a-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m2a-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m2b-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m2b-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m2c-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m2c-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m2d-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m2d-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m3a-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m3a-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m3b-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m3b-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m3c-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m3c-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m3d-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m3d-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m4a-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m4a-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m4b-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m4b-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m4c-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m4c-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "m4d-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "m4d-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "s1-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "s1-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "s2-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "s2-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "s3-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "s3-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "s4-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "s4-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "c1-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "c1-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "c2-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "c2-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "c3-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "c3-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      },
+      {
+        "id": "c4-bore",
+        "fit": "normal",
+        "mate": 2.1818,
+        "designed": 2.575,
+        "measured": 2.5711,
+        "asBuilt": [
+          2.216,
+          2.576
+        ],
+        "clearanceAsBuilt": [
+          0.034,
+          0.394
+        ],
+        "window": [
+          2.2,
+          2.6
+        ],
+        "verdict": "holds",
+        "instruction": "c4-bore (normal, mate 2.18 mm): prints to fit as drawn (2.58 mm in the file)"
+      }
+    ],
+    "warnings": [
+      "no outcome meets the goal: this is the strongest one tried, not a passing part",
+      "preserve 'm1a-seat': 38% of it is inside keep-out 'm1a-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm1b-seat': 38% of it is inside keep-out 'm1b-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm1c-seat': 38% of it is inside keep-out 'm1c-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm1d-seat': 38% of it is inside keep-out 'm1d-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm2a-seat': 38% of it is inside keep-out 'm2a-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm2b-seat': 38% of it is inside keep-out 'm2b-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm2c-seat': 38% of it is inside keep-out 'm2c-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm2d-seat': 38% of it is inside keep-out 'm2d-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm3a-seat': 38% of it is inside keep-out 'm3a-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm3b-seat': 38% of it is inside keep-out 'm3b-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm3c-seat': 38% of it is inside keep-out 'm3c-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm3d-seat': 38% of it is inside keep-out 'm3d-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm4a-seat': 38% of it is inside keep-out 'm4a-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm4b-seat': 38% of it is inside keep-out 'm4b-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm4c-seat': 38% of it is inside keep-out 'm4c-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'm4d-seat': 38% of it is inside keep-out 'm4d-head' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 's1-seat': 50% of it is inside keep-out 'stack' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 's2-seat': 50% of it is inside keep-out 'stack' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 's3-seat': 50% of it is inside keep-out 'stack' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 's4-seat': 50% of it is inside keep-out 'stack' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'c1-thread': 33% of it is inside keep-out 'c1-bore' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'c2-thread': 33% of it is inside keep-out 'c2-bore' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'c3-thread': 33% of it is inside keep-out 'c3-bore' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "preserve 'c4-thread': 33% of it is inside keep-out 'c4-bore' and is left out of the part; a clear zone drawn round a preserved part takes the part away with it. Subtract the preserve from the keep-out ({\"type\": \"subtract\", \"shapes\": [keep-out, preserve]}), or give a clearance keep-out \"bore\": false (it then never cuts what is drawn), if it is meant to stay.",
+      "16640 cells not connected to a support were removed",
+      "impact case 'drop-cg': the part gives 13.9 mm at the patch, over 5% of its 201 mm size; the linear reading of its force and stress is rough",
+      "joint arm3/0 (bond) holds 1.54x its loads in case 'punch' (wall splitting (hoop tension)), under the safety factor 2: less pressure on the wall: a longer joint, or a thicker-walled member",
+      "joint arm4/0 (bond) holds 1.95x its loads in case 'punch' (wall splitting (hoop tension)), under the safety factor 2: less pressure on the wall: a longer joint, or a thicker-walled member",
+      "first natural frequency 270.0 Hz is under vibration.minFrequency 546 Hz (the mode moves mostly along rotation): stiffen the path from the carried masses to the supports in that direction",
+      "the mesh lost 15% of the optimized solid cells (22% of the surface cells, 25% of the thin members): the meshed part is softer and weaker than the design the optimizer found, so the outcome search goes heavier than the design needs. The verified numbers are the ones that hold.",
+      "the part closes over 4 bore end(s) (s1-tap p1, s2-tap p1, s3-tap p1, s4-tap p1): no fastener goes through, so it does not pass. Extend the keep-out over the head and the driver's reach if this repeats.",
+      "does not meet the goal (safety factor 0.49 under 2): raise the volume fraction or the material, or check the loads",
+      "closed bores: [{'id': 's1-tap', 'end': 'p1', 'at': [10.0, 10.0, -3.5]}, {'id': 's2-tap', 'end': 'p1', 'at': [10.0, -10.0, -3.5]}, {'id': 's3-tap', 'end': 'p1', 'at': [-10.0, -10.0, -3.5]}, {'id': 's4-tap', 'end': 'p1', 'at': [-10.0, 10.0, -3.5]}]",
+      "fasteners m1a, m1b, m1c, m1d, m2a, m2b, m2c, m2d, m3a, m3b, m3c, m3d, m4a, m4b, m4c, m4d, s1, s2, s3, s4, c1, c2, c3, c4: about 26% of the clamp load is left after 8760 h at 50 C; clamp on a metal compression limiter or insert, or add a spring washer",
+      "no build direction given, so the layer bonds were not checked and the safety factor 0.49 is the solid material's. pa12 is printed in layers (sls: bonds about 90% of the in-plane strength): built along x the bonds would hold 0.27x the loads, along z 0.40x. Give the study process.buildDirection (or 'auto') to design for it.",
+      "corner, wall-front, wall-corner, drop-corner ...: no duration or repeat count given, so checked as applied once, briefly, at room temperature. As delivered the material data puts the limits at: held about 0 h; applied about 1 times (each alone, at a safety factor of 1; measured data). Give the case `hours`, `cycles` or `temperature` to design for its real service; serviceEnvelope.trade lists what each life costs."
+    ],
+    "governingSafetyFactor": 0.4850589810452339,
+    "tetCrossCheck": "not run: no supports (a self-equilibrated part)"
+  },
+  "checkpoint": {
+    "folder": "/home/user/runs/frame-carbon/checkpoint",
+    "finishedCalls": 2,
+    "callsInProgress": 0,
+    "restored": 0,
+    "replayed": 0,
+    "written": 18
+  }
+}
